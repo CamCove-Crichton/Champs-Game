@@ -36,6 +36,7 @@
 - Started with basic general styling for the body and then the section and footer elements
 - Added in a favicon to display in the tab for the game
 - Added in the description and keywords metadata to the head on the index.html file
+- Continued styling, but started to get more specific by starting on the elements in the game area
 
 ### Finished Game Screen Grabs
 

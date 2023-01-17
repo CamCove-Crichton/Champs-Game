@@ -14,6 +14,7 @@ section, footer {
 
 .section {
     background-color: whitesmoke;
+    text-align: center;
 }
 
 .footer {
@@ -24,4 +25,9 @@ section, footer {
     font-family: 'Roboto Mono',Tahoma, sans‑serif;
     text-align: center;
     font-size: 2.5rem;
+}
+
+/* target number styling */
+.goal {
+    font-size: 150px;
 }
