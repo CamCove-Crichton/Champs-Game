@@ -31,6 +31,8 @@
 - Continued working on the html structure for the layout of the game
 - Created the README.md file and set it up with all sections required at the time and populated the README.md file as much as possible to where the project was at, and then set the goal to continuously update the README.md file as the project developed
 - Added html code to the scores div and to the footer in the index.html file
+- Added a Submit button to the question area and updated the "How to play" list in the index.html file
+- Began styling the game in the style.css file
 
 ### Finished Game Screen Grabs
 

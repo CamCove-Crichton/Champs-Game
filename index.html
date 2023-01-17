@@ -19,14 +19,14 @@
 <body>
     <!-- header for the logo of the game -->
     <header>
-        <h1>Champs</h1>
+        <h1 class="headings">Champs</h1>
     </header>
 
     <!-- game area section -->
     <section>
         <!-- target number display div -->
         <div>
-            <span id="target">0</span>
+            <span class="headings" data-entry="target">0</span>
         </div>
 
         <!-- question area div -->
@@ -41,6 +41,7 @@
                 </span>
                 <span data-entry="computer">0</span>
             </div>
+            <button data-entry="submit">Submit</button>
         </div>
 
         <!-- scores div -->
@@ -53,10 +54,11 @@
 
     <!-- footer for the "How To Play" instructions -->
     <footer class="footer">
-        <h2>How To Play:</h2>
+        <h2 class="headings">How To Play:</h2>
         <p>
             <ul>
                 <li>Try to match the target number by guessing a number from 0 to 5 depending on the target number</li>
+                <li>Submit your answer once you are happy with your guess</li>
                 <li>The computer will then guess a number from 1 to 5 depending on the target number</li>
                 <li>If the sum of your number and the computers number equal the target number you get a point</li>
                 <li>If the sum does not match the target number, then the computer gets a point</li>
