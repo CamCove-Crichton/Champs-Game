@@ -1,4 +1,9 @@
 /* General Styling */
 body {
     background-color: #D3D3D3;
+    font-family: 'Laila', Tahoma, sans-serif;
+}
+
+.headings {
+    font-family: 'Roboto Mono',Tahoma, sans‑serif;
 }
