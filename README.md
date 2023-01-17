@@ -33,6 +33,9 @@
 - Added html code to the scores div and to the footer in the index.html file
 - Added a Submit button to the question area and updated the "How to play" list in the index.html file
 - Began styling the game in the style.css file
+- Started with basic general styling for the body and then the section and footer elements
+- Added in a favicon to display in the tab for the game
+- Added in the description and keywords metadata to the head on the index.html file
 
 ### Finished Game Screen Grabs
 
