@@ -26,7 +26,7 @@
     <section>
         <!-- target number display div -->
         <div>
-            <span id="target-number">0</span>
+            <span id="target">0</span>
         </div>
 
         <!-- question area div -->
@@ -44,14 +44,25 @@
         </div>
 
         <!-- scores div -->
+        <!-- idea used from the Love Maths project -->
         <div>
-
+            <p class="scores">Players Score: <span id="player-score">0</span></p>
+            <p class="scores">Computer Score: <span id="computer-score">0</span></p>
         </div>
     </section>
 
     <!-- footer for the "How To Play" instructions -->
-    <footer>
-
+    <footer class="footer">
+        <h2>How To Play:</h2>
+        <p>
+            <ul>
+                <li>Try to match the target number by guessing a number from 0 to 5 depending on the target number</li>
+                <li>The computer will then guess a number from 1 to 5 depending on the target number</li>
+                <li>If the sum of your number and the computers number equal the target number you get a point</li>
+                <li>If the sum does not match the target number, then the computer gets a point</li>
+                <li>The first to get to 10 points wins</li>
+            </ul>
+        </p>
     </footer>
     
     <script src="assets/js/script.js"></script>

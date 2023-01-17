@@ -30,6 +30,7 @@
 - Linked the CSS and js files to the html file and tested the were working
 - Continued working on the html structure for the layout of the game
 - Created the README.md file and set it up with all sections required at the time and populated the README.md file as much as possible to where the project was at, and then set the goal to continuously update the README.md file as the project developed
+- Added html code to the scores div and to the footer in the index.html file
 
 ### Finished Game Screen Grabs
 
@@ -52,6 +53,7 @@
 ### Code
 [Code Institute](https://codeinstitute.net/) - Love Maths Project (Layout ideas and troublshooting)
 
+- index.html file used the idea from the Love Maths project for the question area layout
 ```
 {
     <div>
@@ -66,6 +68,17 @@
             </div>
 }
 ```
+
+- To display the scores, the code used was from the Love Maths project
+```
+{
+    <div>
+            <p class="scores">Players Score: <span id="player-score">0</span></p>
+            <p class="scores">Computer Score: <span id="computer-score">0</span></p>
+        </div>
+}
+```
+
 [Google Fonts](https://fonts.google.com/about) - Font styles
 
 ```
