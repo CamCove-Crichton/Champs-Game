@@ -38,6 +38,7 @@
 - Added in the description and keywords metadata to the head on the index.html file
 - Continued styling, but started to get more specific by starting on the elements in the game area
 - Added a heading for the target number in the index.html file
+- Continued styling, and after running into some issues with positioning, used devtools to get to the bottom of the mysteries, and rectified
 
 ### Finished Game Screen Grabs
 
@@ -46,6 +47,8 @@
 | Test | Expected Result | Pass/Fail |
 
 ### Bugs
+- Issues with positioning in the game area styling section (Used devtools to see what was happening and made progress)
+- Issue with the :after element in displaying correctly - still needs more research and use of devtools
 
 ### Validator Testing
 
