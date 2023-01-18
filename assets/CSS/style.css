@@ -3,6 +3,7 @@ body {
     background-color: #D3D3D3;
     font-family: 'Laila', Tahoma, sans-serif;
     font-weight: bolder;
+    line-height: 1.5rem;
 }
 
 section,
@@ -26,11 +27,26 @@ footer {
     font-family: 'Roboto Mono', Tahoma, sans‑serif;
     text-align: center;
     font-size: 2.5rem;
+    line-height: 1rem;
+    padding: 15px 0;
 }
 
 /* game area styling */
+#target-h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 15px;
+}
+
+#target-div {
+    height: auto;
+}
+
 .goal {
-    font-size: 5rem;
+    font-size: 300%;
+    height: 75px;
+    margin: 0;
+    line-height: normal;
 }
 
 /* Idea from Love Maths project */
