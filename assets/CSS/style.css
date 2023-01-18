@@ -28,8 +28,32 @@ footer {
     font-size: 2.5rem;
 }
 
-/* target number styling */
-
+/* game area styling */
 .goal {
     font-size: 5rem;
+}
+
+/* Idea from Love Maths project */
+.user {
+    width: 45px;
+    height: 30px;
+    font-size: 2.5rem;
+    margin: 0 15px;
+}
+
+/* Code from Love Maths project */
+.user::after {
+    content: attr(data-entry);
+    font-size: 1rem;
+    color: black;
+    position: relative;
+    left: -0.5rem;
+    top: 1.5rem;
+}
+
+/* Idea from w3schools */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

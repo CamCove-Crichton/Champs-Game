@@ -37,6 +37,7 @@
 - Added in a favicon to display in the tab for the game
 - Added in the description and keywords metadata to the head on the index.html file
 - Continued styling, but started to get more specific by starting on the elements in the game area
+- Added a heading for the target number in the index.html file
 
 ### Finished Game Screen Grabs
 
@@ -100,5 +101,18 @@
 ```
 {
      <script src="https://kit.fontawesome.com/c1b12b8cf9.js" crossorigin="anonymous"></script>
+}
+```
+
+[w3schools](https://www.w3schools.com/) - Troubleshooting and Researching
+
+- How to remove arrows from a numbers input
+```
+{
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
 }
 ```
