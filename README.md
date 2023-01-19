@@ -40,6 +40,7 @@
 - Added a heading for the target number in the index.html file
 - Continued styling, and after running into some issues with positioning, used devtools to get to the bottom of the mysteries, and rectified
 To try to increase productivity with styling, devtools were used for the remaining part of the styling process to use as a visual as styling was done, and then from the devtools I would take my code from trial and error and paste into my style.css file
+- Continued to fine tune the styling and began working on the media queries for a responsive design, working on it from a small mobile screen to add media queries as the screen size increases
 
 ### Finished Game Screen Grabs
 
