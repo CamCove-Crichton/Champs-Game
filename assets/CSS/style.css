@@ -84,3 +84,24 @@ input::-webkit-inner-spin-button {
     border: 2px solid black;
     background-color: #209CEE;
 }
+
+/* score styling */
+.scores {
+    font-size: 1rem;
+    color: whitesmoke;
+    background-color: black;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    padding: 0 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#player-score {
+    color: #209CEE;
+}
+
+#computer-score {
+    color: red;
+}
