@@ -105,3 +105,20 @@ input::-webkit-inner-spin-button {
 #computer-score {
     color: red;
 }
+
+/* footer styling */
+#footer-h2 {
+    line-height: 2.5rem;
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+#instructions {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.rules {
+    padding: 10px 0;
+}
