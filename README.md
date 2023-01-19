@@ -39,6 +39,7 @@
 - Continued styling, but started to get more specific by starting on the elements in the game area
 - Added a heading for the target number in the index.html file
 - Continued styling, and after running into some issues with positioning, used devtools to get to the bottom of the mysteries, and rectified
+To try to increase productivity with styling, devtools were used for the remaining part of the styling process to use as a visual as styling was done, and then from the devtools I would take my code from trial and error and paste into my style.css file
 
 ### Finished Game Screen Grabs
 
