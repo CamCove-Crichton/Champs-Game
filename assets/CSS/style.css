@@ -50,6 +50,10 @@ footer {
     line-height: normal;
 }
 
+.question-area {
+    margin: 15px 5px;
+}
+
 /* Idea from Love Maths project */
 .user {
     width: 45px;
@@ -121,4 +125,16 @@ input::-webkit-inner-spin-button {
 
 .rules {
     padding: 10px 0;
+}
+
+/* media queries */
+/* for screens 400px and above */
+@media screen and (min-width: 400px) {
+    .scores {
+    width: 200px;
+    display: inline-block;
+    left: 0;
+    margin: 20px 15px 10px 15px;
+    padding: 10px;
+    }
 }
