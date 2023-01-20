@@ -61,6 +61,7 @@ footer {
     height: 30px;
     font-size: 2.5rem;
     margin: 0 5px;
+    display: inline-block;
 }
 
 /* Code from Love Maths project */
