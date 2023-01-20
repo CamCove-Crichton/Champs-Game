@@ -186,3 +186,14 @@ input::-webkit-inner-spin-button {
         margin: 15px;
     }
 }
+
+/* for screens 1000px and above */
+@media screen and (min-width: 1000px) {
+    .user {
+        margin: 15px 60px;
+    }
+
+    .scores {
+        margin: 30px 90px 15px 90px;
+    }
+}
