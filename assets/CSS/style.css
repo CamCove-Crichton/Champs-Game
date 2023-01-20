@@ -22,6 +22,7 @@ footer {
 
 .footer {
     background-color: #209CEE;
+    border-radius: 5px;
 }
 
 .headings {
@@ -130,11 +131,58 @@ input::-webkit-inner-spin-button {
 /* media queries */
 /* for screens 400px and above */
 @media screen and (min-width: 400px) {
+    #champs {
+        font-size: 5rem;
+    }
+    
     .scores {
-    width: 200px;
-    display: inline-block;
-    left: 0;
-    margin: 20px 15px 10px 15px;
-    padding: 10px;
+        width: 200px;
+        display: inline-block;
+        left: 0;
+        margin: 20px 15px 10px 15px;
+        padding: 10px;
+    }
+}
+
+/* for screens 600px and above */
+@media screen and (min-width: 600px) {
+    #target-h2 {
+        font-size: 2.5rem;
+        padding-bottom: 15px;
+    }
+
+    #target-div {
+        margin: 15px;
+    }
+
+    .goal {
+        font-size: 7.5rem;
+        contain: content;
+        line-height: 1.3em;
+        height: 150px;
+    }
+
+    .user {
+        /* margin: 0 30px; */
+        padding: 10px;
+        height: 60px;
+        width: 90px;
+        font-size: 5rem;
+    }
+
+    #submit {
+        margin: 15px;
+    }
+
+    #game-scores {
+        margin-bottom: 15px;
+    }
+
+    #footer-h2 {
+        margin-top: 15px;
+    }
+
+    #instructions {
+        margin: 15px;
     }
 }

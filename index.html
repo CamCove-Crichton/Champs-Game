@@ -27,7 +27,7 @@
 <body>
     <!-- header for the logo of the game -->
     <header>
-        <h1 class="headings">Champs</h1>
+        <h1 id="champs" class="headings">Champs</h1>
     </header>
 
     <!-- game area section -->
@@ -45,9 +45,7 @@
                 <span>
                     <input class="user" data-entry="player" type="number">
                 </span>
-                <span class="user">
-                    <i class="fa-solid fa-plus"></i>
-                </span>
+                <span class="user"><i class="fa-solid fa-plus"></i></span>
                 <span class="user" data-entry="computer">0</span>
             </div>
             <button id="submit" data-entry="submit">Submit</button>
@@ -55,7 +53,7 @@
 
         <!-- scores div -->
         <!-- idea used from the Love Maths project -->
-        <div>
+        <div id="game-scores">
             <p class="scores">Players Score: <span id="player-score">0</span></p>
             <p class="scores">Computer Score: <span id="computer-score">0</span></p>
         </div>
