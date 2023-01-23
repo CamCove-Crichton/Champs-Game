@@ -52,7 +52,7 @@ footer {
 }
 
 .question-area {
-    margin: 15px 5px;
+    margin: 15px 5px 0;
 }
 
 /* Idea from Love Maths project */
@@ -81,15 +81,16 @@ footer {
 }
 
 .question-h3 {
-    font-size: 1.2rem;
-    margin: 0;
+    font-size: 1rem;
+    margin: 5px 5px 15px;
     padding: 5px;
-    width: fit-content;
+    width: 75px;
+    display: inline-block;
 }
 
-.user > .question-h3 {
+/* .user > .question-h3 {
     text-align: center;
-}
+} */
 
 /* Code from Love Maths project */
 /* .user::after {
