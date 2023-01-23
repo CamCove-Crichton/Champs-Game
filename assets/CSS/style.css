@@ -72,6 +72,23 @@ footer {
     font-size: 2.5rem;
     font-family: 'Laila', Tahoma, sans-serif;
     font-weight: bolder;
+    box-sizing: border-box;
+}
+
+.user p {
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.question-h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 5px;
+    width: fit-content;
+}
+
+.user > .question-h3 {
+    text-align: center;
 }
 
 /* Code from Love Maths project */
