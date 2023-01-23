@@ -82,10 +82,20 @@ footer {
 
 .question-h3 {
     font-size: 1rem;
-    margin: 5px 5px 15px;
+    /* margin: 5px 5px 15px; */
     padding: 5px;
     width: 75px;
     display: inline-block;
+}
+
+#player-h3 {
+    position: relative;
+    left: -15px;
+}
+
+#computer-h3 {
+    position: relative;
+    right: -15px;
 }
 
 /* .user > .question-h3 {
@@ -163,7 +173,21 @@ input::-webkit-inner-spin-button {
     #champs {
         font-size: 5rem;
     }
-    
+
+    /* .question-h3 {
+        margin: 5px 15px 15px;
+    } */
+
+    #player-h3 {
+        position: relative;
+        left: -30px;
+    }
+
+    #computer-h3 {
+        position: relative;
+        right: -30px;
+    }
+
     .scores {
         width: 200px;
         display: inline-block;
@@ -199,6 +223,27 @@ input::-webkit-inner-spin-button {
         font-size: 5rem;
     }
 
+    .user #player-number {
+        font-size: 5rem;
+        height: 75px;
+    }
+
+    .question-h3 {
+        font-size: 1.5rem;
+        /* margin: 5px 50px 15px; */
+        width: 120px;
+    }
+
+    #player-h3 {
+        position: relative;
+        left: -60px;
+    }
+
+    #computer-h3 {
+        position: relative;
+        right: -60px;
+    }
+
     #submit {
         margin: 15px;
     }
@@ -220,6 +265,22 @@ input::-webkit-inner-spin-button {
 @media screen and (min-width: 1000px) {
     .user {
         margin: 15px 60px;
+    }
+
+    .question-h3 {
+        font-size: 2.5rem;
+        width: 240px;
+        margin: 0;
+    }
+
+    #player-h3 {
+        position: relative;
+        left: -105px;
+    }
+
+    #computer-h3 {
+        position: relative;
+        right: -105px;
     }
 
     .scores {
