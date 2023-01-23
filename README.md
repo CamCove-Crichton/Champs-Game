@@ -93,6 +93,43 @@ To try to increase productivity with styling, devtools were used for the remaini
 }
 ```
 
+#### script.js Credits
+
+- Idea to check DOMContentLoaded as well as some function name idea from the Code Institute - Love Maths Project
+```
+{
+    // Check if the DOM content is loaded
+
+
+// function name and idea from Love Maths project
+function runGame()
+
+
+// function name and idea from Love Maths project
+function checkAnswer()
+
+
+// function name and idea from Love Maths project
+function calculateAnswer()
+
+
+// function name and idea from Love Maths project
+function playerScore()
+
+
+// function name and idea from Love Maths project
+function computerScore()
+
+
+// function name and idea from Love Maths project
+function targetNumber()
+
+
+// function name and idea from Love Maths project
+function gameOver()
+}
+```
+
 [Google Fonts](https://fonts.google.com/about) - Font styles
 
 ```
