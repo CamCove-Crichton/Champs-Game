@@ -42,11 +42,11 @@
         <div>
             <div class="question-area">
                 <!-- idea from Code Institute Love Maths project -->
-                <span>
-                    <input class="user" data-entry="player" type="number">
-                </span>
+                <div class="user">
+                    <input id="player-number" data-entry="player" type="number">
+                </div>
                 <span class="user"><i class="fa-solid fa-plus"></i></span>
-                <span class="user" data-entry="computer">0</span>
+                <div class="user" data-entry="computer">0</div>
             </div>
             <button id="submit" data-entry="submit">Submit</button>
         </div>
@@ -63,15 +63,17 @@
     <footer class="footer">
         <h2 id="footer-h2" class="headings">How To Play:</h2>
         <!-- <p> -->
-            <ul id="instructions">
-                <li class="rules">Try to match the target number by guessing a number from 0 to 5 depending on the target number
-                </li>
-                <li class="rules">Submit your answer once you are happy with your guess</li>
-                <li class="rules">The computer will then guess a number from 1 to 5 depending on the target number</li>
-                <li class="rules">If the sum of your number and the computers number equal the target number you get a point</li>
-                <li class="rules">If the sum does not match the target number, then the computer gets a point</li>
-                <li class="rules">The first to get to 10 points wins</li>
-            </ul>
+        <ul id="instructions">
+            <li class="rules">Try to match the target number by guessing a number from 0 to 5 depending on the target
+                number
+            </li>
+            <li class="rules">Submit your answer once you are happy with your guess</li>
+            <li class="rules">The computer will then guess a number from 1 to 5 depending on the target number</li>
+            <li class="rules">If the sum of your number and the computers number equal the target number you get a point
+            </li>
+            <li class="rules">If the sum does not match the target number, then the computer gets a point</li>
+            <li class="rules">The first to get to 10 points wins</li>
+        </ul>
         <!-- </p> -->
     </footer>
 
