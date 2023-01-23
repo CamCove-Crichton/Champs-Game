@@ -41,6 +41,7 @@
 - Continued styling, and after running into some issues with positioning, used devtools to get to the bottom of the mysteries, and rectified
 To try to increase productivity with styling, devtools were used for the remaining part of the styling process to use as a visual as styling was done, and then from the devtools I would take my code from trial and error and paste into my style.css file
 - Continued to fine tune the styling and began working on the media queries for a responsive design, working on it from a small mobile screen to add media queries as the screen size increases
+- Moved onto creating the function names I could think of that would be required for the script.js file in order to manipulate the DOM for the game to work
 
 ### Finished Game Screen Grabs
 
@@ -55,6 +56,7 @@ To try to increase productivity with styling, devtools were used for the remaini
 ### Validator Testing
 
 ### Unfixed Bugs
+- Would like to finesse styling with the h3 headings in the question area div across all forms of media queries for a better responsive design
 
 ## Credits
 
