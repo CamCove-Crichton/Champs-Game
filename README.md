@@ -46,6 +46,7 @@ To try to increase productivity with styling, devtools were used for the remaini
 - Created the targetNumber function to generate a number between 1 and 10 for the player to aim to get to
 - Created a runGame function to utilise as the main loop for the game
 - Created a calculateAnswer function to work out the sum of the users input value and the generated
+- Created a checkAnswer function to check the targetNumber and the calculateAnswer are identical
 
 ### Finished Game Screen Grabs
 
@@ -61,6 +62,7 @@ To try to increase productivity with styling, devtools were used for the remaini
 
 ### Unfixed Bugs
 - Would like to finesse styling with the h3 headings in the question area div across all forms of media queries for a better responsive design
+- Need to sort the checkAnswer function to work correctly, possibly the two variables are not being seen as number values
 
 ## Credits
 
