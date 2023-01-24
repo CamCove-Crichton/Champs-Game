@@ -14,8 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
             runGame();
             console.log("DOM Content loaded");
             // console.log(numComputer.innerText);
-            calculateAnswer();
+            // calculateAnswer();
             console.log(calculateAnswer());
+            checkAnswer();
         }
     })
 })
@@ -38,9 +39,16 @@ function runGame() {
  * A function to check the sum of the users number and the generated number
  * are equal to the target number
  */
-// function checkAnswer() {
+function checkAnswer() {
+    let randomTarget = targetNumber();
+    let calculatedAnswer = calculateAnswer();
 
-// }
+    if (randomTarget === calculatedAnswer) {
+        alert("Well done, you got it right :D");
+    } else {
+        alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer}, try again`)
+    }
+}
 
 
 // function name, idea and code from Love Maths project
