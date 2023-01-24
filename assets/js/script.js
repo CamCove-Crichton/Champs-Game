@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // console.log(numComputer.innerText);
             // calculateAnswer();
             console.log(calculateAnswer());
-            checkAnswer();
+            setTimeout(checkAnswer, 1000);
         }
     })
 })
@@ -43,10 +43,10 @@ function checkAnswer() {
     let randomTarget = targetNumber();
     let calculatedAnswer = calculateAnswer();
 
-    if (randomTarget === calculatedAnswer) {
-        alert("Well done, you got it right :D");
+    if (randomTarget !== calculatedAnswer) { 
+        alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer}, try again`);
     } else {
-        alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer}, try again`)
+        alert("Well done, you got it right :D");
     }
 }
 
