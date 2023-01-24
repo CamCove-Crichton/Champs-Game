@@ -58,8 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function targetNumber() {
     let numTarget = document.getElementById("num-target");
     numTarget.innerText = parseInt(Math.floor(Math.random() *10) +1);
-
-    console.log(numTarget);
 }
 
 
