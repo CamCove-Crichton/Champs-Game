@@ -42,6 +42,8 @@
 To try to increase productivity with styling, devtools were used for the remaining part of the styling process to use as a visual as styling was done, and then from the devtools I would take my code from trial and error and paste into my style.css file
 - Continued to fine tune the styling and began working on the media queries for a responsive design, working on it from a small mobile screen to add media queries as the screen size increases
 - Moved onto creating the function names I could think of that would be required for the script.js file in order to manipulate the DOM for the game to work
+- Changed the number display for the Computer player to a "?" instead of a number as it shall remain hidden until the user player submits their answer
+- Created the targetNumber function to generate a number between 1 and 10 for the player to aim to get to
 
 ### Finished Game Screen Grabs
 
@@ -127,6 +129,24 @@ function targetNumber()
 
 // function name and idea from Love Maths project
 function gameOver()
+}
+```
+
+- Idea for the DOMContentLoaded event listener from the Code Institute - Love Maths Project
+```
+{
+document.addEventListener("DOMContentLoaded", function () {
+    let button = document.getElementById("submit");
+    targetNumber();
+
+    button.addEventListener("click", function() {
+        if (this.getAttribute("data-entry") === "submit") {
+            alert("DOM content loaded");
+            console.log("DOM Content loaded");
+            calculateAnswer();
+        }
+    })
+})
 }
 ```
 
