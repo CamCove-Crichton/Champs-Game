@@ -216,6 +216,15 @@ input::-webkit-inner-spin-button {
 
 /* for screens 600px and above */
 @media screen and (min-width: 600px) {
+    .levels {
+        width: 200px;
+        display: inline-block;
+        left: revert;
+        margin: 15px 10px;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
     #target-h2 {
         font-size: 2.5rem;
         padding-bottom: 15px;
@@ -280,6 +289,11 @@ input::-webkit-inner-spin-button {
 
 /* for screens 1000px and above */
 @media screen and (min-width: 1000px) {
+    .levels {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    
     .user {
         margin: 15px 60px;
     }
