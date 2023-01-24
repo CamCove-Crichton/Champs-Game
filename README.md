@@ -150,6 +150,27 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 ```
 
+- The code and idea for the focus and the player input to always have a cusor in and to have no value in, is from the Code Institute - Love Maths project
+```
+{
+    document.getElementById("player-number").value = " ";
+    document.getElementById("player-number").focus();
+}
+```
+
+- The calculateAnswer() code was from the Code Institute - Love Moths project
+```
+{
+    function calculateAnswer(operand1, operand2) {
+    operand1 = parseInt(document.getElementById("player-number").value);
+    operand2 = parseInt(document.getElementById("computer-number").innerText);
+    
+
+    return[operand1 + operand2];
+}
+}
+```
+
 [Google Fonts](https://fonts.google.com/about) - Font styles
 
 ```
