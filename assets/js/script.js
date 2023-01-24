@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
             runGame();
             console.log("DOM Content loaded");
             // console.log(numComputer.innerText);
-            // calculateAnswer();
+            calculateAnswer();
+            console.log(calculateAnswer());
         }
     })
 })
@@ -46,13 +47,13 @@ function runGame() {
 /**
  * A function to calculate the sum of the users entry and the generated number
  */
-// function calculateAnswer() {
-//     let operand1 = parseInt(document.getElementById("player-number").innerText);
-//     let operand2 = parseInt(document.getElementById("computer").innerText);
-//     let operator = document.getElementById("operator").innerText;
-
+function calculateAnswer(operand1, operand2) {
+    operand1 = parseInt(document.getElementById("player-number").value);
+    operand2 = parseInt(document.getElementById("computer-number").innerText);
     
-// }
+
+    return[operand1 + operand2];
+}
 
 
 // function name and idea from Love Maths project
