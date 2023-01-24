@@ -44,6 +44,8 @@ To try to increase productivity with styling, devtools were used for the remaini
 - Moved onto creating the function names I could think of that would be required for the script.js file in order to manipulate the DOM for the game to work
 - Changed the number display for the Computer player to a "?" instead of a number as it shall remain hidden until the user player submits their answer
 - Created the targetNumber function to generate a number between 1 and 10 for the player to aim to get to
+- Created a runGame function to utilise as the main loop for the game
+- Created a calculateAnswer function to work out the sum of the users input value and the generated
 
 ### Finished Game Screen Grabs
 
