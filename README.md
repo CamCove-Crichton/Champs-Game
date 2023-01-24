@@ -100,6 +100,17 @@ To try to increase productivity with styling, devtools were used for the remaini
 }
 ```
 
+- Idea to use buttons for the levels using the created attribute data-entry from the Code Institute - Love Maths project
+```
+{
+    <div>
+            <button id="level1" data-entry="level-one" class="levels">level 1</button>
+            <button id="level2" data-entry="level-two" class="levels">level 2</button>
+            <button id="level3" data-entry="level-three" class="levels">level 3</button>
+        </div>
+}
+```
+
 #### script.js Credits
 
 - Idea to check DOMContentLoaded as well as some function name idea from the Code Institute - Love Maths Project
