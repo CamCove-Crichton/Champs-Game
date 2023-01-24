@@ -3,20 +3,33 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     let button = document.getElementById("submit");
+
     targetNumber();
+    document.getElementById("player-number").value = " ";
+    document.getElementById("player-number").focus();
 
     button.addEventListener("click", function() {
         if (this.getAttribute("data-entry") === "submit") {
-            alert("DOM content loaded");
+            // alert("DOM content loaded");
+            runGame();
             console.log("DOM Content loaded");
-            calculateAnswer();
+            // console.log(numComputer.innerText);
+            // calculateAnswer();
         }
     })
 })
 
 
 // function name and idea from Love Maths project
-// function runGame()
+/**
+ * The main function to generate a number for the computer once the player inputs their number
+ */
+function runGame() {
+    
+    let numComputer = document.getElementById("computer-number");
+            numComputer.innerText = parseInt(Math.floor(Math.random() *10) +1);
+}
+
 
 
 // function name and idea from Love Maths project
