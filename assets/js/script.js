@@ -3,6 +3,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     let button = document.getElementById("submit");
+    targetNumber();
 
     button.addEventListener("click", function() {
         if (this.getAttribute("data-entry") === "submit") {
@@ -15,9 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // function name and idea from Love Maths project
-function runGame(gameType) {
-    targetNumber();
-}
+// function runGame()
 
 
 // function name and idea from Love Maths project
@@ -57,7 +56,10 @@ function runGame(gameType) {
  * A function to generate the target number the user has to aim to meet
  */
 function targetNumber() {
-    let numTarget = Math.floor(Math.random() *10);
+    let numTarget = document.getElementById("num-target");
+    numTarget.innerText = parseInt(Math.floor(Math.random() *10) +1);
+
+    console.log(numTarget);
 }
 
 
