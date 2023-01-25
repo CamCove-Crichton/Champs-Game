@@ -47,8 +47,9 @@ To try to increase productivity with styling, devtools were used for the remaini
 - Created a runGame function to utilise as the main loop for the game
 - Created a calculateAnswer function to work out the sum of the users input value and the generated
 - Created a checkAnswer function to check the targetNumber and the calculateAnswer are identical
-- Deceided to create three levels using buttons for the player to decide if they want to change the difficulty in guessing numbers for an answer from 1 to 10 for level 1, to an answer from 1 to 20 for level 2 and an answer from 1 to 30 for level 3
+- Decided to create three levels using buttons for the player to decide if they want to change the difficulty in guessing numbers for an answer from 1 to 10 for level 1, to an answer from 1 to 20 for level 2 and an answer from 1 to 30 for level 3
 - Styled the most recent additions of the level buttons to the game
+- Created a levelOneQuestion function to display the questions for level one and then had to modify the other functions created so far to incorporate the levels
 
 ### Finished Game Screen Grabs
 
