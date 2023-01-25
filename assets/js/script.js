@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-entry") === "submit") {
                 console.log("DOM Content loaded");
-                console.log(calculateAnswer());
-                setTimeout(checkAnswer, 1000);
+                console.log(calculateAnswer()[0]);
+                // setTimeout(checkAnswer, 1000);
             } else {
-                let gameType = this.getAttribute("data-type");
+                let gameType = this.getAttribute("data-entry");
                 runGame(gameType);
             }
         })
@@ -68,16 +68,16 @@ function runGame(gameType) {
  * A function to check the sum of the users number and the generated number
  * are equal to the target number
  */
-function checkAnswer() {
-    let randomTarget = targetNumber();
-    let calculatedAnswer = calculateAnswer();
+// function checkAnswer() {
+//     let randomTarget = targetNumber();
+//     let calculatedAnswer = calculateAnswer();
 
-    if (randomTarget !== calculatedAnswer) {
-        alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer}, try again`);
-    } else {
-        alert("Well done, you got it right :D");
-    }
-}
+//     if (randomTarget !== calculatedAnswer) {
+//         alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer}, try again`);
+//     } else {
+//         alert("Well done, you got it right :D");
+//     }
+// }
 
 
 // function name, idea and code from Love Maths project
@@ -88,8 +88,7 @@ function calculateAnswer(operand1, operand2) {
     operand1 = parseInt(document.getElementById("player-number").value);
     operand2 = parseInt(document.getElementById("computer-number").innerText);
 
-
-    return [operand1 + operand2];
+    return [operand1 + operand2, runGame];
 }
 
 
