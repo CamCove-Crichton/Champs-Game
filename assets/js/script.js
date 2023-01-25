@@ -13,27 +13,52 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log(calculateAnswer());
                 setTimeout(checkAnswer, 1000);
             } else {
+                let gameType = this.getAttribute("data-type");
                 runGame(gameType);
             }
         })
     }
+
+    runGame("level-one");
+
 })
 
 
-// function name and idea from Love Maths project
+// function name, idea & code from Love Maths project
 /**
  * The main function to generate a number for the computer once the player inputs their number
  */
-function runGame() {
+function runGame(gameType) {
 
-    targetNumber();
+    // targetNumber();
     document.getElementById("player-number").value = " ";
     document.getElementById("player-number").focus();
     document.getElementById("computer-number").value = "?";
 
-    // below two lines of code need to go into each levels function code
-    let numComputer = document.getElementById("computer-number");
-    numComputer.innerText = parseInt(Math.floor(Math.random() * 10) + 1);
+
+    // Generates numbers for the different levels
+    // level 1 numbers
+    let num1 = parseInt(Math.floor(Math.random() * 10) + 1);
+    let num2 = parseInt(Math.floor(Math.random() * 10) + 1);
+
+    // level 2 numbers
+    let num3 = parseInt(Math.floor(Math.random() * 20) + 1);
+    let num4 = parseInt(Math.floor(Math.random() * 20) + 1);
+
+    // level 3 numbers
+    let num5 = parseInt(Math.floor(Math.random() * 30) + 1);
+    let num6 = parseInt(Math.floor(Math.random() * 30) + 1);
+
+    if (gameType === "level-one") {
+        levelOneQuestion(num1, num2);
+    } else {
+        alert(`Unknown game type: ${gameType}`);
+        throw `Unknown game type: ${gameType}. Aborting!`;
+    }
+
+    // generates the computer number
+    // let numComputer = document.getElementById("computer-number");
+    // numComputer.innerText = parseInt(Math.floor(Math.random() * 10) + 1);
 }
 
 
