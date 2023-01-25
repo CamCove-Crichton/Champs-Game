@@ -111,6 +111,7 @@ function calculateAnswer(operand1, operand2) {
 //     numTarget.innerText = parseInt(Math.floor(Math.random() * 10) + 1);
 // }
 
+// Code from the Code Institute - Love Maths project
 /**
  * A function to display the question as a target number from 1 to 10
  */

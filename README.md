@@ -189,6 +189,51 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 ```
 
+- Code for the levelOneQuestion function from the Code Institute - Love Maths project
+```
+{
+    function levelOneQuestion(numTarget, numComputer) {
+
+    document.getElementById("num-target").textContent = numTarget > numComputer ? numTarget : numComputer;
+    document.getElementById("computer-number").textContent = numComputer > numTarget ? numComputer : numTarget;
+
+}
+}
+```
+
+- Code for the runGame(gameType) function from the Code Institute - Love Maths project
+```
+{
+    function runGame(gameType) {
+
+    // targetNumber();
+    document.getElementById("player-number").value = " ";
+    document.getElementById("player-number").focus();
+    document.getElementById("computer-number").value = "?";
+
+
+    // Generates numbers for the different levels
+    // level 1 numbers
+    let num1 = parseInt(Math.floor(Math.random() * 10) + 1);
+    let num2 = parseInt(Math.floor(Math.random() * 10) + 1);
+
+    // level 2 numbers
+    let num3 = parseInt(Math.floor(Math.random() * 20) + 1);
+    let num4 = parseInt(Math.floor(Math.random() * 20) + 1);
+
+    // level 3 numbers
+    let num5 = parseInt(Math.floor(Math.random() * 30) + 1);
+    let num6 = parseInt(Math.floor(Math.random() * 30) + 1);
+
+    if (gameType === "level-one") {
+        levelOneQuestion(num1, num2);
+    } else {
+        alert(`Unknown game type: ${gameType}`);
+        throw `Unknown game type: ${gameType}. Aborting!`;
+    }
+}
+```
+
 [Google Fonts](https://fonts.google.com/about) - Font styles
 
 ```
