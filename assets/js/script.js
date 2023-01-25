@@ -81,9 +81,19 @@ function calculateAnswer(operand1, operand2) {
 /**
  * A function to generate the target number the user has to aim to meet
  */
-function targetNumber() {
-    let numTarget = document.getElementById("num-target");
-    numTarget.innerText = parseInt(Math.floor(Math.random() * 10) + 1);
+// function targetNumber() {
+//     let numTarget = document.getElementById("num-target");
+//     numTarget.innerText = parseInt(Math.floor(Math.random() * 10) + 1);
+// }
+
+/**
+ * A function to display the question as a target number from 1 to 10
+ */
+function levelOneQuestion(numTarget, numComputer) {
+
+    document.getElementById("num-target").textContent = numTarget > numComputer ? numTarget : numComputer;
+    document.getElementById("computer-number").textContent = numComputer > numTarget ? numComputer : numTarget;
+
 }
 
 
