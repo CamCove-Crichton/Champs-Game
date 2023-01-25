@@ -39,7 +39,7 @@ function runGame(gameType) {
     // Generates numbers for the different levels
     // level 1 numbers
     let num1 = parseInt(Math.floor(Math.random() * 10) + 1);
-    let num2 = parseInt(Math.floor(Math.random() * 10) + 1);
+    let num2 = parseInt(Math.floor(Math.random() * 5) + 1);
 
     // level 2 numbers
     let num3 = parseInt(Math.floor(Math.random() * 20) + 1);
@@ -117,8 +117,8 @@ function calculateAnswer(operand1, operand2) {
  */
 function levelOneQuestion(numTarget, numComputer) {
 
-    document.getElementById("num-target").textContent = numTarget > numComputer ? numTarget : numComputer;
-    document.getElementById("computer-number").textContent = numComputer > numTarget ? numComputer : numTarget;
+    document.getElementById("num-target").textContent = numTarget;
+    document.getElementById("computer-number").textContent = numComputer;
 
 }
 
