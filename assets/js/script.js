@@ -2,23 +2,21 @@
 // Idea from Love Maths project
 
 document.addEventListener("DOMContentLoaded", function () {
-    let button = document.getElementById("submit");
-
-    targetNumber();
-    document.getElementById("player-number").value = " ";
-    document.getElementById("player-number").focus();
-
-    button.addEventListener("click", function() {
-        if (this.getAttribute("data-entry") === "submit") {
-            // alert("DOM content loaded");
-            runGame();
-            console.log("DOM Content loaded");
-            // console.log(numComputer.innerText);
-            // calculateAnswer();
-            console.log(calculateAnswer());
-            setTimeout(checkAnswer, 1000);
-        }
-    })
+    // code from Code Institute - Love Maths Project
+    let buttons = document.getElementsByTagName("button");
+    
+    // for loop code from Code Institute - Love Maths Project
+    for (button of buttons) {
+        button.addEventListener("click", function () {
+            if (this.getAttribute("data-entry") === "submit") {
+                console.log("DOM Content loaded");
+                console.log(calculateAnswer());
+                setTimeout(checkAnswer, 1000);
+            } else {
+                runGame(gameType);
+            }
+        })
+    }
 })
 
 
@@ -27,9 +25,15 @@ document.addEventListener("DOMContentLoaded", function () {
  * The main function to generate a number for the computer once the player inputs their number
  */
 function runGame() {
-    
+
+    targetNumber();
+    document.getElementById("player-number").value = " ";
+    document.getElementById("player-number").focus();
+    document.getElementById("computer-number").value = "?";
+
+    // below two lines of code need to go into each levels function code
     let numComputer = document.getElementById("computer-number");
-            numComputer.innerText = parseInt(Math.floor(Math.random() *10) +1);
+    numComputer.innerText = parseInt(Math.floor(Math.random() * 10) + 1);
 }
 
 
@@ -43,7 +47,7 @@ function checkAnswer() {
     let randomTarget = targetNumber();
     let calculatedAnswer = calculateAnswer();
 
-    if (randomTarget !== calculatedAnswer) { 
+    if (randomTarget !== calculatedAnswer) {
         alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer}, try again`);
     } else {
         alert("Well done, you got it right :D");
@@ -58,9 +62,9 @@ function checkAnswer() {
 function calculateAnswer(operand1, operand2) {
     operand1 = parseInt(document.getElementById("player-number").value);
     operand2 = parseInt(document.getElementById("computer-number").innerText);
-    
 
-    return[operand1 + operand2];
+
+    return [operand1 + operand2];
 }
 
 
@@ -79,7 +83,7 @@ function calculateAnswer(operand1, operand2) {
  */
 function targetNumber() {
     let numTarget = document.getElementById("num-target");
-    numTarget.innerText = parseInt(Math.floor(Math.random() *10) +1);
+    numTarget.innerText = parseInt(Math.floor(Math.random() * 10) + 1);
 }
 
 
