@@ -234,6 +234,25 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 ```
 
+- The code for checking the answer is correct is used from the Code Insitute - Love Maths project
+```
+{
+    function checkAnswer() {
+    let goalTarget = parseInt(document.getElementById("num-target").innerHTML);
+    let calculatedAnswer = calculateAnswer();
+    let isCorrect = goalTarget === calculatedAnswer[0];
+
+    if (isCorrect) {
+        alert("Well done, you got it right :D");
+    } else {
+        alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer[0]}, try again`);
+    }
+
+    runGame(calculateAnswer[1]);
+}
+}
+```
+
 [Google Fonts](https://fonts.google.com/about) - Font styles
 
 ```

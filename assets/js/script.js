@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (this.getAttribute("data-entry") === "submit") {
                 console.log("DOM Content loaded");
                 console.log(calculateAnswer()[0]);
-                // setTimeout(checkAnswer, 1000);
+                setTimeout(checkAnswer, 1000);
             } else {
                 let gameType = this.getAttribute("data-entry");
                 runGame(gameType);
@@ -63,21 +63,24 @@ function runGame(gameType) {
 
 
 
-// function name and idea from Love Maths project
+// function name, idea & code from Love Maths project
 /**
  * A function to check the sum of the users number and the generated number
  * are equal to the target number
  */
-// function checkAnswer() {
-//     let randomTarget = targetNumber();
-//     let calculatedAnswer = calculateAnswer();
+function checkAnswer() {
+    let goalTarget = parseInt(document.getElementById("num-target").innerHTML);
+    let calculatedAnswer = calculateAnswer();
+    let isCorrect = goalTarget === calculatedAnswer[0];
 
-//     if (randomTarget !== calculatedAnswer) {
-//         alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer}, try again`);
-//     } else {
-//         alert("Well done, you got it right :D");
-//     }
-// }
+    if (isCorrect) {
+        alert("Well done, you got it right :D");
+    } else {
+        alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer[0]}, try again`);
+    }
+
+    runGame(calculateAnswer[1]);
+}
 
 
 // function name, idea and code from Love Maths project
