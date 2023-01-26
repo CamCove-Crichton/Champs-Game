@@ -4,7 +4,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // code from Code Institute - Love Maths Project
     let buttons = document.getElementsByTagName("button");
-    
+
     // for loop code from Code Institute - Love Maths Project
     for (button of buttons) {
         button.addEventListener("click", function () {
@@ -81,7 +81,7 @@ function checkAnswer() {
         computerScore();
     }
 
-    runGame(calculateAnswer[1]);
+    runGame(calculatedAnswer[1]);
 }
 
 
@@ -93,7 +93,20 @@ function calculateAnswer(operand1, operand2) {
     operand1 = parseInt(document.getElementById("player-number").value);
     operand2 = parseInt(document.getElementById("computer-number").innerText);
 
-    return [operand1 + operand2, runGame];
+    // let levels = document.getElementsByClassName("levels");
+
+    // for (level of levels) {
+    //     if (level.getAttribute("data-entry") === "level-one") {
+    //         runGame("level-one");
+    //     } else if (level.getAttribute("data-entry") === "level-two") {
+    //         runGame("level-two")
+    //     } else if (level.getAttribute("data-entry") === "level-three") {
+    //         runGame("level-three");
+    //     }
+    // }
+
+    return [operand1 + operand2, ];
+
 }
 
 
