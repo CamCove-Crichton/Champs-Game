@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function runGame(gameType) {
 
-    // targetNumber();
     document.getElementById("player-number").value = " ";
     document.getElementById("player-number").focus();
     document.getElementById("computer-number").value = "?";
@@ -55,10 +54,7 @@ function runGame(gameType) {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
-
-    // generates the computer number
-    // let numComputer = document.getElementById("computer-number");
-    // numComputer.innerText = parseInt(Math.floor(Math.random() * 10) + 1);
+    
 }
 
 
@@ -93,20 +89,27 @@ function calculateAnswer(operand1, operand2) {
     operand1 = parseInt(document.getElementById("player-number").value);
     operand2 = parseInt(document.getElementById("computer-number").innerText);
 
-    // let levels = document.getElementsByClassName("levels");
+    let levels = document.getElementsByClassName("levels").innerHTML;
+
+    if (levels === "level 1") {
+        return [operand1 + operand2, "level-one"];
+    } else if (levels === "level 2") {
+        return [operand1 + operand2, "level-two"];
+    } else if (levels === "level 3") {
+        return [operand1 + operand2, "level-three"];
+    }
 
     // for (level of levels) {
     //     if (level.getAttribute("data-entry") === "level-one") {
-    //         runGame("level-one");
+    //         level = document.getElementById("level1").innerHTML;
     //     } else if (level.getAttribute("data-entry") === "level-two") {
-    //         runGame("level-two")
+    //         level = document.getElementById("level2").innerHTML;
     //     } else if (level.getAttribute("data-entry") === "level-three") {
-    //         runGame("level-three");
+    //         level = document.getElementById("level3").innerHTML;
     //     }
     // }
 
-    return [operand1 + operand2, ];
-
+    // return [operand1 + operand2, runGame(level)];
 }
 
 
@@ -132,17 +135,6 @@ function computerScore() {
     document.getElementById("computer-score").innerHTML = ++wrongScore;
 
 }
-
-
-// function name and idea from Love Maths project
-
-/**
- * A function to generate the target number the user has to aim to meet
- */
-// function targetNumber() {
-//     let numTarget = document.getElementById("num-target");
-//     numTarget.innerText = parseInt(Math.floor(Math.random() * 10) + 1);
-// }
 
 // Code from the Code Institute - Love Maths project
 /**
