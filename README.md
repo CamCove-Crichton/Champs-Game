@@ -50,6 +50,7 @@ To try to increase productivity with styling, devtools were used for the remaini
 - Decided to create three levels using buttons for the player to decide if they want to change the difficulty in guessing numbers for an answer from 1 to 10 for level 1, to an answer from 1 to 20 for level 2 and an answer from 1 to 30 for level 3
 - Styled the most recent additions of the level buttons to the game
 - Created a levelOneQuestion function to display the questions for level one and then had to modify the other functions created so far to incorporate the levels
+- Created a function for incrementing the players score and then another function for incrementing the computers score
 
 ### Finished Game Screen Grabs
 
@@ -249,6 +250,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     runGame(calculateAnswer[1]);
+}
+}
+```
+
+- The function for the player score was from the Code Institute - Love Maths project
+```
+{
+    function playerScore() {
+
+    let previousScore = parseInt(document.getElementById("player-score").innerHTML);
+    document.getElementById("player-score").innerHTML = ++previousScore;
+
+}
+}
+```
+
+- Code for the Computer score is from the Code Institute - Love Maths project
+```
+{
+    function computerScore() {
+
+    let wrongScore = parseInt(document.getElementById("computer-score").innerHTML);
+    document.getElementById("computer-score").innerHTML = ++wrongScore;
+
 }
 }
 ```

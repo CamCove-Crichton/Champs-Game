@@ -75,8 +75,10 @@ function checkAnswer() {
 
     if (isCorrect) {
         alert("Well done, you got it right :D");
+        playerScore();
     } else {
         alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer[0]}, try again`);
+        computerScore();
     }
 
     runGame(calculateAnswer[1]);
@@ -95,12 +97,28 @@ function calculateAnswer(operand1, operand2) {
 }
 
 
-// function name and idea from Love Maths project
-// function playerScore()
+// function name, idea & code from Love Maths project
+/**
+ * A function to increment the players score when they get the correct answer
+ */
+function playerScore() {
+
+    let previousScore = parseInt(document.getElementById("player-score").innerHTML);
+    document.getElementById("player-score").innerHTML = ++previousScore;
+
+}
 
 
-// function name and idea from Love Maths project
-// function computerScore()
+// function name, idea & code from Love Maths project
+/**
+ * A function to increment the computer score when the player gets the incorrect total
+ */
+function computerScore() {
+
+    let wrongScore = parseInt(document.getElementById("computer-score").innerHTML);
+    document.getElementById("computer-score").innerHTML = ++wrongScore;
+
+}
 
 
 // function name and idea from Love Maths project
