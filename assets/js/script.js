@@ -89,27 +89,22 @@ function calculateAnswer(operand1, operand2) {
     operand1 = parseInt(document.getElementById("player-number").value);
     operand2 = parseInt(document.getElementById("computer-number").innerText);
 
-    let levels = document.getElementsByClassName("levels").innerHTML;
+    let levels = document.getElementsByClassName("levels");
 
-    if (levels === "level 1") {
-        return [operand1 + operand2, "level-one"];
-    } else if (levels === "level 2") {
-        return [operand1 + operand2, "level-two"];
-    } else if (levels === "level 3") {
-        return [operand1 + operand2, "level-three"];
+    for (level of levels) {
+        level.addEventListener('submit', function() {
+            if (this.getAttribute("data-entry") === "level-one") {
+                return [operand1 + operand2, "level-one"]
+            } else if (this.getAttribute("data-entry") === "level-two") {
+                return [operand1 + operand2, "level-two"]
+            } else if (this.getAttribute("data-entry") === "level-three") {
+                return [operand1 + operand2, "level-three"]
+            }
+        })
+        
     }
 
-    // for (level of levels) {
-    //     if (level.getAttribute("data-entry") === "level-one") {
-    //         level = document.getElementById("level1").innerHTML;
-    //     } else if (level.getAttribute("data-entry") === "level-two") {
-    //         level = document.getElementById("level2").innerHTML;
-    //     } else if (level.getAttribute("data-entry") === "level-three") {
-    //         level = document.getElementById("level3").innerHTML;
-    //     }
-    // }
-
-    // return [operand1 + operand2, runGame(level)];
+    return [operand1 + operand2, levels];
 }
 
 
