@@ -114,6 +114,17 @@ To try to increase productivity with styling, devtools were used for the remaini
 }
 ```
 
+- Idea and code for for the hover and active pseudo class for the levels class from the Code Institute - Love Maths project
+```
+{
+    .levels:active,
+.levels:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+}
+```
+
 #### script.js Credits
 
 - Idea to check DOMContentLoaded as well as some function name idea from the Code Institute - Love Maths Project

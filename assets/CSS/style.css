@@ -51,6 +51,12 @@ footer {
     left: 25%;
 }
 
+.levels:active,
+.levels:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+
 #target-h2 {
     margin-top: 0;
     margin-bottom: 0;
