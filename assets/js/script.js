@@ -50,6 +50,10 @@ function runGame(gameType) {
 
     if (gameType === "level-one") {
         levelOneQuestion(num1, num2);
+    } else if (gameType === "level-two") {
+        levelOneQuestion(num3, num4);
+    } else if (gameType === "level-three") {
+        levelOneQuestion(num5, num6);
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
