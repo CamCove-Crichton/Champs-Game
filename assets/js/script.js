@@ -1,5 +1,7 @@
 // Check if the DOM content is loaded
 // Idea from Love Maths project
+gameLevels()
+currentLevel = 'level-one'
 
 document.addEventListener("DOMContentLoaded", function () {
     // code from Code Institute - Love Maths Project
@@ -29,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * The main function to generate a number for the computer once the player inputs their number
  */
 function runGame(gameType) {
+    console.log("game type", gameType);
 
     document.getElementById("player-number").value = " ";
     document.getElementById("player-number").focus();
@@ -81,7 +84,7 @@ function checkAnswer() {
         computerScore();
     }
 
-    runGame(calculatedAnswer[1]);
+    runGame(currentLevel);
 }
 
 
@@ -92,23 +95,8 @@ function checkAnswer() {
 function calculateAnswer(operand1, operand2) {
     operand1 = parseInt(document.getElementById("player-number").value);
     operand2 = parseInt(document.getElementById("computer-number").innerText);
-
-    let levels = document.getElementsByClassName("levels");
-
-    for (level of levels) {
-        level.addEventListener('submit', function() {
-            if (this.getAttribute("data-entry") === "level-one") {
-                return [operand1 + operand2, "level-one"]
-            } else if (this.getAttribute("data-entry") === "level-two") {
-                return [operand1 + operand2, "level-two"]
-            } else if (this.getAttribute("data-entry") === "level-three") {
-                return [operand1 + operand2, "level-three"]
-            }
-        })
-        
-    }
-
-    return [operand1 + operand2, levels];
+    
+    return [operand1 + operand2];
 }
 
 
@@ -146,6 +134,25 @@ function levelOneQuestion(numTarget, numComputer) {
 
 }
 
+/**
+ * A function to determin the current level of the game
+ */
+function gameLevels() {
+
+    let levels = document.getElementsByClassName("levels");
+
+    for (level of levels) {
+        level.addEventListener('click', function() {
+            if (this.getAttribute("data-entry").innerText === "level-one") {
+                currentLevel = "level-one";
+            } else if (this.getAttribute("data-entry") === "level-two") {
+                currentLevel = "level-two"
+            } else if (this.getAttribute("data-entry") === "level-three") {
+                currentLevel = "level-three"
+            }
+        })
+    }
+}
 
 // function name and idea from Love Maths project
 // function gameOver()

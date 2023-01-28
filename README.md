@@ -320,3 +320,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 }
 ```
+
+[Code Institute](https://codeinstitute.net/) - Tutor support
+
+- Helped see how to store the data as a variable to then reassign the variable depending on the button selected for the level
+```
+{
+    function gameLevels() {
+
+    let levels = document.getElementsByClassName("levels");
+
+    for (level of levels) {
+        level.addEventListener('click', function() {
+            if (this.getAttribute("data-entry").innerText === "level-one") {
+                currentLevel = "level-one";
+            } else if (this.getAttribute("data-entry") === "level-two") {
+                currentLevel = "level-two"
+            } else if (this.getAttribute("data-entry") === "level-three") {
+                currentLevel = "level-three"
+            }
+        })
+    }
+}
+}
+
+{
+    gameLevels()
+currentLevel = 'level-one'
+}
+```
