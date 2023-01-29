@@ -84,7 +84,7 @@ function checkAnswer() {
         computerScore();
     }
 
-    runGame(currentLevel);
+    gameOver();
 }
 
 
@@ -155,4 +155,15 @@ function gameLevels() {
 }
 
 // function name and idea from Love Maths project
-// function gameOver()
+/**
+ * A function to check the scores
+ */
+function gameOver() {
+    if (document.getElementById("player-score").innerHTML === "5") {
+        alert("Congratulations! You have won the game :D Let's play again");
+    } else if (document.getElementById("computer-score").innerHTML === "5") {
+        alert("Sorry you lost :( but don't be sad, lets play again!");
+    } else {
+        runGame(currentLevel);
+    }
+}
