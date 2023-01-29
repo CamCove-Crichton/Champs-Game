@@ -15,6 +15,9 @@
 
 ### Wireframes
 
+![Wireframe1](assets/README%20images/Wireframe1.png)
+
+![Wireframe2](assets/README%20images/Wireframe2.png)
 
 - Started by creating all the directories and files required for the project:-
 1. index.html
@@ -61,19 +64,26 @@ To try to increase productivity with styling, devtools were used for the remaini
 
 ### Finished Game Screen Grabs
 
+- Champs Game, displaying the title, the level buttons, the target to try and match as well as the players input and the computers guess
+![Champs game screen grab of game area](assets/README%20images/Game%20Screen%20grab%20one.png)
+
+- Champs Game, displaying the player and computer scores and the rules on how to play the game
+![Champs game screen grab of rules](assets/README%20images/Game%20Screen%20Grab%20two.png)
+
 ## Testing
 
 | Test | Expected Result | Pass/Fail |
 
 ### Bugs
 - Issues with positioning in the game area styling section (Used devtools to see what was happening and made progress)
-- Issue with the :after element in displaying correctly - still needs more research and use of devtools
+- Issue with the :after element in displaying correctly - still needs more research and use of devtools (Decided to not utilise the :after and instead went with creating heading elements)
+- Need to sort the checkAnswer function to work correctly, possibly the two variables are not being seen as number values (Had assistance from Code Institute tutor support to sort this bug)
 
 ### Validator Testing
 
 ### Unfixed Bugs
 - Would like to finesse styling with the h3 headings in the question area div across all forms of media queries for a better responsive design
-- Need to sort the checkAnswer function to work correctly, possibly the two variables are not being seen as number values
+- Need to see why when the level change is selected to a higher level and then back to a lower level that the data is not reassigned and stored in the variable currentLevel
 
 ## Credits
 
