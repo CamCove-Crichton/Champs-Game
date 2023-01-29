@@ -52,11 +52,11 @@ function runGame(gameType) {
     let num6 = parseInt(Math.floor(Math.random() * 15) + 1);
 
     if (gameType === "level-one") {
-        levelOneQuestion(num1, num2);
+        levelQuestion(num1, num2);
     } else if (gameType === "level-two") {
-        levelOneQuestion(num3, num4);
+        levelQuestion(num3, num4);
     } else if (gameType === "level-three") {
-        levelOneQuestion(num5, num6);
+        levelQuestion(num5, num6);
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
@@ -127,7 +127,7 @@ function computerScore() {
 /**
  * A function to display the question as a target number from 1 to 10
  */
-function levelOneQuestion(numTarget, numComputer) {
+function levelQuestion(numTarget, numComputer) {
 
     document.getElementById("num-target").textContent = numTarget;
     document.getElementById("computer-number").textContent = numComputer;
