@@ -159,11 +159,27 @@ function gameLevels() {
  * A function to check the scores
  */
 function gameOver() {
-    if (document.getElementById("player-score").innerHTML === "5") {
+
+    if (document.getElementById("player-score").innerHTML === "10") {
         alert("Congratulations! You have won the game :D Let's play again");
-    } else if (document.getElementById("computer-score").innerHTML === "5") {
+        gameReset();
+    } else if (document.getElementById("computer-score").innerHTML === "10") {
         alert("Sorry you lost :( but don't be sad, lets play again!");
+        gameReset();
     } else {
         runGame(currentLevel);
     }
+
+}
+
+/**
+ * A function to reset the scores when the game is over show the game has started again
+ */
+function gameReset() {
+
+    document.getElementById("player-score").innerHTML = "0";
+    document.getElementById("computer-score").innerHTML = "0";
+
+    runGame(currentLevel);
+
 }

@@ -52,6 +52,8 @@ To try to increase productivity with styling, devtools were used for the remaini
 - Created a levelOneQuestion function to display the questions for level one and then had to modify the other functions created so far to incorporate the levels
 - Created a function for incrementing the players score and then another function for incrementing the computers score
 - Added in the code for the levels 2 and 3 into the runGame()
+- Added in a function to determine when the Game is over
+- Created a function to reset the scores when the Game is over to show the player the game has started again
 
 ### Finished Game Screen Grabs
 
