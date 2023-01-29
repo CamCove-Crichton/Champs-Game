@@ -40,16 +40,16 @@ function runGame(gameType) {
 
     // Generates numbers for the different levels
     // level 1 numbers
-    let num1 = parseInt(Math.floor(Math.random() * 10) + 1);
+    let num1 = parseInt(Math.floor(Math.random() * 5) + 6);
     let num2 = parseInt(Math.floor(Math.random() * 5) + 1);
 
     // level 2 numbers
-    let num3 = parseInt(Math.floor(Math.random() * 20) + 1);
-    let num4 = parseInt(Math.floor(Math.random() * 20) + 1);
+    let num3 = parseInt(Math.floor(Math.random() * 10) + 11);
+    let num4 = parseInt(Math.floor(Math.random() * 10) + 1);
 
     // level 3 numbers
-    let num5 = parseInt(Math.floor(Math.random() * 30) + 1);
-    let num6 = parseInt(Math.floor(Math.random() * 30) + 1);
+    let num5 = parseInt(Math.floor(Math.random() * 15) + 16);
+    let num6 = parseInt(Math.floor(Math.random() * 15) + 1);
 
     if (gameType === "level-one") {
         levelOneQuestion(num1, num2);
