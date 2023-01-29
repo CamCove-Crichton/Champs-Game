@@ -23,6 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
+    // Code from the Code Institute - Love Maths project
+    document.getElementById("player-number").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            document.getElementById("computer-number").innerHTML = hiddenNumber;
+            setTimeout(checkAnswer, 1000);
+        }
+    })
+
     runGame("level-one");
 
 })

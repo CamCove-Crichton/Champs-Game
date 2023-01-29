@@ -57,6 +57,7 @@ To try to increase productivity with styling, devtools were used for the remaini
 - Added in a variable to store the generated number value in the hiddenNumber variable
 - Updated the levelQuestion() function to assign the value to the hiddenNumber variable
 - I then assigned the hiddenNumber variable to the element in the DOM with the id of computer-number so it can display the number for the player to see after they have inout their answer
+- Added an event listener so the user can press enter to submit their answer
 
 ### Finished Game Screen Grabs
 
@@ -292,6 +293,18 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("computer-score").innerHTML = ++wrongScore;
 
 }
+}
+```
+
+- Code for the event listener for keydown from the Code Institute - Love Maths project
+```
+{
+    document.getElementById("player-number").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            document.getElementById("computer-number").innerHTML = hiddenNumber;
+            setTimeout(checkAnswer, 1000);
+        }
+    })
 }
 ```
 
