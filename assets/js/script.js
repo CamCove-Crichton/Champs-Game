@@ -2,6 +2,7 @@
 // Idea from Love Maths project
 gameLevels()
 currentLevel = 'level-one'
+let hiddenNumber;
 
 document.addEventListener("DOMContentLoaded", function () {
     // code from Code Institute - Love Maths Project
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-entry") === "submit") {
+                document.getElementById("computer-number").innerHTML = hiddenNumber;
                 console.log("DOM Content loaded");
                 console.log(calculateAnswer()[0]);
                 setTimeout(checkAnswer, 1000);
@@ -35,7 +37,7 @@ function runGame(gameType) {
 
     document.getElementById("player-number").value = " ";
     document.getElementById("player-number").focus();
-    document.getElementById("computer-number").value = "?";
+    document.getElementById("computer-number").innerHTML = "?";
 
 
     // Generates numbers for the different levels
@@ -94,9 +96,10 @@ function checkAnswer() {
  */
 function calculateAnswer(operand1, operand2) {
     operand1 = parseInt(document.getElementById("player-number").value);
-    operand2 = parseInt(document.getElementById("computer-number").innerText);
+    operand2 = hiddenNumber;
     
     return [operand1 + operand2];
+    
 }
 
 
@@ -130,7 +133,7 @@ function computerScore() {
 function levelQuestion(numTarget, numComputer) {
 
     document.getElementById("num-target").textContent = numTarget;
-    document.getElementById("computer-number").textContent = numComputer;
+    hiddenNumber = numComputer;
 
 }
 

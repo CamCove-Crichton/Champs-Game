@@ -54,6 +54,9 @@ To try to increase productivity with styling, devtools were used for the remaini
 - Added in the code for the levels 2 and 3 into the runGame()
 - Added in a function to determine when the Game is over
 - Created a function to reset the scores when the Game is over to show the player the game has started again
+- Added in a variable to store the generated number value in the hiddenNumber variable
+- Updated the levelQuestion() function to assign the value to the hiddenNumber variable
+- I then assigned the hiddenNumber variable to the element in the DOM with the id of computer-number so it can display the number for the player to see after they have inout their answer
 
 ### Finished Game Screen Grabs
 
