@@ -74,6 +74,7 @@ To try to increase productivity with styling, devtools were used for the remaini
 - Updated the levelQuestion() function to assign the value to the hiddenNumber variable
 - I then assigned the hiddenNumber variable to the element in the DOM with the id of computer-number so it can display the number for the player to see after they have inout their answer
 - Added an event listener so the user can press enter to submit their answer
+- Added styling code to the Javascript file in the gameLevels function to style the level buttons to indicate which level the game is currently set to
 
 ### Finished Game Screen Grabs
 

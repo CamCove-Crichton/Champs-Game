@@ -3,6 +3,8 @@
 gameLevels();
 let currentLevel = 'level-one';
 let hiddenNumber;
+document.getElementById("level1").style.backgroundColor = "black";
+document.getElementById("level1").style.color = "whitesmoke";
 
 document.addEventListener("DOMContentLoaded", function () {
     // code from Code Institute - Love Maths Project
@@ -156,10 +158,28 @@ function gameLevels() {
         level.addEventListener('click', function () {
             if (this.getAttribute("data-entry") === "level-one") {
                 currentLevel = "level-one";
+                document.getElementById("level1").style.backgroundColor = "black";
+                document.getElementById("level1").style.color = "whitesmoke";
+                document.getElementById("level2").style.backgroundColor = "#209CEE";
+                document.getElementById("level2").style.color = "black";
+                document.getElementById("level3").style.backgroundColor = "#209CEE";
+                document.getElementById("level3").style.color = "black";
             } else if (this.getAttribute("data-entry") === "level-two") {
                 currentLevel = "level-two";
+                document.getElementById("level2").style.backgroundColor = "black";
+                document.getElementById("level2").style.color = "whitesmoke";
+                document.getElementById("level1").style.backgroundColor = "#209CEE";
+                document.getElementById("level1").style.color = "black";
+                document.getElementById("level3").style.backgroundColor = "#209CEE";
+                document.getElementById("level3").style.color = "black";
             } else if (this.getAttribute("data-entry") === "level-three") {
                 currentLevel = "level-three";
+                document.getElementById("level3").style.backgroundColor = "black";
+                document.getElementById("level3").style.color = "whitesmoke";
+                document.getElementById("level1").style.backgroundColor = "#209CEE";
+                document.getElementById("level1").style.color = "black";
+                document.getElementById("level2").style.backgroundColor = "#209CEE";
+                document.getElementById("level2").style.color = "black";
             }
         })
     }
