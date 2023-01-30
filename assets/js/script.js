@@ -1,7 +1,7 @@
 // Check if the DOM content is loaded
 // Idea from Love Maths project
-gameLevels()
-currentLevel = 'level-one'
+gameLevels();
+let currentLevel = 'level-one';
 let hiddenNumber;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -20,20 +20,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 let gameType = this.getAttribute("data-entry");
                 runGame(gameType);
             }
-        })
+        });
     }
 
     // Code from the Code Institute - Love Maths project
-    document.getElementById("player-number").addEventListener("keydown", function(event) {
+    document.getElementById("player-number").addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             document.getElementById("computer-number").innerHTML = hiddenNumber;
             setTimeout(checkAnswer, 1000);
         }
-    })
+    });
 
     runGame("level-one");
 
-})
+});
 
 
 // function name, idea & code from Love Maths project
@@ -71,7 +71,7 @@ function runGame(gameType) {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
-    
+
 }
 
 
@@ -105,9 +105,9 @@ function checkAnswer() {
 function calculateAnswer(operand1, operand2) {
     operand1 = parseInt(document.getElementById("player-number").value);
     operand2 = hiddenNumber;
-    
+
     return [operand1 + operand2];
-    
+
 }
 
 
@@ -153,13 +153,13 @@ function gameLevels() {
     let levels = document.getElementsByClassName("levels");
 
     for (level of levels) {
-        level.addEventListener('click', function() {
+        level.addEventListener('click', function () {
             if (this.getAttribute("data-entry").innerText === "level-one") {
                 currentLevel = "level-one";
             } else if (this.getAttribute("data-entry") === "level-two") {
-                currentLevel = "level-two"
+                currentLevel = "level-two";
             } else if (this.getAttribute("data-entry") === "level-three") {
-                currentLevel = "level-three"
+                currentLevel = "level-three";
             }
         })
     }

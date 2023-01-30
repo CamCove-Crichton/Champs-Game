@@ -87,10 +87,6 @@ To try to increase productivity with styling, devtools were used for the remaini
 
 ## Credits
 
-### Content
-
-### Media
-
 ### Code
 [Code Institute](https://codeinstitute.net/) - Love Maths Project (Layout ideas and troublshooting)
 
