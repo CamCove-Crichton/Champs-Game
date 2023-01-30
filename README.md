@@ -18,6 +18,12 @@
 
 ### Am I Responsive
 
+- Used AmIResponsive to check the responsive design on multiple size screens
+
+[AmIResponsive](https://amiresponsive.co.uk/)
+
+![Am I Responsive screen grab](assets/README%20images/Champs%20AmIResponsive.png)
+
 ## Development
 
 ### Wireframes
