@@ -204,10 +204,26 @@ function gameOver() {
         alert("Congratulations! You have won the game :D Let's play again");
         gameReset();
         document.getElementById("level1").disabled = false;
+        document.getElementById("level2").disabled = false;
+        document.getElementById("level3").disabled = false;
+        document.getElementById("level1").style.backgroundColor = "#209CEE";
+        document.getElementById("level1").style.color = "black";
+        document.getElementById("level2").style.backgroundColor = "#209CEE";
+        document.getElementById("level2").style.color = "black";
+        document.getElementById("level3").style.backgroundColor = "#209CEE";
+        document.getElementById("level3").style.color = "black";
     } else if (document.getElementById("computer-score").innerHTML === "10") {
         alert("Sorry you lost :( but don't be sad, lets play again!");
         gameReset();
         document.getElementById("level1").disabled = false;
+        document.getElementById("level2").disabled = false;
+        document.getElementById("level3").disabled = false;
+        document.getElementById("level1").style.backgroundColor = "#209CEE";
+        document.getElementById("level1").style.color = "black";
+        document.getElementById("level2").style.backgroundColor = "#209CEE";
+        document.getElementById("level2").style.color = "black";
+        document.getElementById("level3").style.backgroundColor = "#209CEE";
+        document.getElementById("level3").style.color = "black";
     } else {
         runGame(currentLevel);
     }
