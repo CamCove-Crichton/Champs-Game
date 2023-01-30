@@ -1,10 +1,11 @@
 // Check if the DOM content is loaded
 // Idea from Love Maths project
 gameLevels();
-let currentLevel = 'level-one';
+let currentLevel;
 let hiddenNumber;
-document.getElementById("level1").style.backgroundColor = "black";
-document.getElementById("level1").style.color = "whitesmoke";
+document.getElementById("player-number").disabled = true;
+// document.getElementById("level1").style.backgroundColor = "black";
+// document.getElementById("level1").style.color = "whitesmoke";
 
 document.addEventListener("DOMContentLoaded", function () {
     // code from Code Institute - Love Maths Project
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    runGame("level-one");
+    runGame(currentLevel);
 
 });
 
@@ -70,8 +71,8 @@ function runGame(gameType) {
     } else if (gameType === "level-three") {
         levelQuestion(num5, num6);
     } else {
-        alert(`Unknown game type: ${gameType}`);
-        throw `Unknown game type: ${gameType}. Aborting!`;
+        // alert(`Unknown game type: ${gameType}`);
+        // throw `Unknown game type: ${gameType}. Aborting!`;
     }
 
 }
@@ -157,38 +158,62 @@ function gameLevels() {
     for (level of levels) {
         level.addEventListener('click', function () {
             if (this.getAttribute("data-entry") === "level-one") {
+
                 currentLevel = "level-one";
+
                 document.getElementById("level1").style.backgroundColor = "black";
                 document.getElementById("level1").style.color = "#209CEE";
+
                 document.getElementById("level2").style.backgroundColor = "#D3D3D3";
                 document.getElementById("level2").style.color = "grey";
+
                 document.getElementById("level3").style.backgroundColor = "#D3D3D3";
                 document.getElementById("level3").style.color = "grey";
+
                 document.getElementById("level1").disabled = true;
                 document.getElementById("level2").disabled = true;
                 document.getElementById("level3").disabled = true;
+
+                document.getElementById("player-number").disabled = false;
+
             } else if (this.getAttribute("data-entry") === "level-two") {
+
                 currentLevel = "level-two";
+
                 document.getElementById("level2").style.backgroundColor = "black";
                 document.getElementById("level2").style.color = "#209CEE";
+
                 document.getElementById("level1").style.backgroundColor = "#D3D3D3";
                 document.getElementById("level1").style.color = "grey";
+
                 document.getElementById("level3").style.backgroundColor = "#D3D3D3";
                 document.getElementById("level3").style.color = "grey";
+
                 document.getElementById("level1").disabled = true;
                 document.getElementById("level2").disabled = true;
                 document.getElementById("level3").disabled = true;
+
+                document.getElementById("player-number").disabled = false;
+
             } else if (this.getAttribute("data-entry") === "level-three") {
+
                 currentLevel = "level-three";
+
                 document.getElementById("level3").style.backgroundColor = "black";
                 document.getElementById("level3").style.color = "#209CEE";
+
                 document.getElementById("level1").style.backgroundColor = "#D3D3D3";
                 document.getElementById("level1").style.color = "grey";
+
                 document.getElementById("level2").style.backgroundColor = "#D3D3D3";
                 document.getElementById("level2").style.color = "grey";
+
                 document.getElementById("level1").disabled = true;
                 document.getElementById("level2").disabled = true;
                 document.getElementById("level3").disabled = true;
+
+                document.getElementById("player-number").disabled = false;
+
             }
         })
     }
@@ -201,29 +226,45 @@ function gameLevels() {
 function gameOver() {
 
     if (document.getElementById("player-score").innerHTML === "10") {
+
         alert("Congratulations! You have won the game :D Let's play again");
+
         gameReset();
+
         document.getElementById("level1").disabled = false;
         document.getElementById("level2").disabled = false;
         document.getElementById("level3").disabled = false;
+
         document.getElementById("level1").style.backgroundColor = "#209CEE";
         document.getElementById("level1").style.color = "black";
+
         document.getElementById("level2").style.backgroundColor = "#209CEE";
         document.getElementById("level2").style.color = "black";
+
         document.getElementById("level3").style.backgroundColor = "#209CEE";
         document.getElementById("level3").style.color = "black";
+
     } else if (document.getElementById("computer-score").innerHTML === "10") {
+
         alert("Sorry you lost :( but don't be sad, lets play again!");
+
         gameReset();
+
         document.getElementById("level1").disabled = false;
         document.getElementById("level2").disabled = false;
         document.getElementById("level3").disabled = false;
+
         document.getElementById("level1").style.backgroundColor = "#209CEE";
         document.getElementById("level1").style.color = "black";
+
         document.getElementById("level2").style.backgroundColor = "#209CEE";
         document.getElementById("level2").style.color = "black";
+        
         document.getElementById("level3").style.backgroundColor = "#209CEE";
         document.getElementById("level3").style.color = "black";
+
+        document.getElementById("player-number").disabled = true;
+        
     } else {
         runGame(currentLevel);
     }
