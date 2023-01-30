@@ -75,6 +75,7 @@ To try to increase productivity with styling, devtools were used for the remaini
 - I then assigned the hiddenNumber variable to the element in the DOM with the id of computer-number so it can display the number for the player to see after they have inout their answer
 - Added an event listener so the user can press enter to submit their answer
 - Added styling code to the Javascript file in the gameLevels function to style the level buttons to indicate which level the game is currently set to
+- Added code to the gameLevels function to disable the level buttons once a level is selected to start the game, and will be disabled until the game is over, at which point the player will be able to select another level to play another game of Champs
 
 ### Finished Game Screen Grabs
 
