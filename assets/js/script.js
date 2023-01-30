@@ -154,7 +154,7 @@ function gameLevels() {
 
     for (level of levels) {
         level.addEventListener('click', function () {
-            if (this.getAttribute("data-entry").innerText === "level-one") {
+            if (this.getAttribute("data-entry") === "level-one") {
                 currentLevel = "level-one";
             } else if (this.getAttribute("data-entry") === "level-two") {
                 currentLevel = "level-two";
