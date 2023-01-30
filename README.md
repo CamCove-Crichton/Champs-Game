@@ -9,6 +9,13 @@
 
 ## Deployment
 
+[Champs Game](https://camcove-crichton.github.io/Champs-Game/) - Click "Champs Game" to visit the site and to play the game
+
+- Using Github repositories, I went into the Settings pages
+- Down the right side of the settings page, I went into the Pages tab
+- Under Branch, I selected the drop down arrow and changed it from 'none' to 'main'
+- I then selected the Save button
+
 ### Am I Responsive
 
 ## Development
@@ -80,6 +87,9 @@ To try to increase productivity with styling, devtools were used for the remaini
 - Need to sort the checkAnswer function to work correctly, possibly the two variables are not being seen as number values (Had assistance from Code Institute tutor support to sort this bug)
 
 ### Validator Testing
+
+- Ran the index.html code through the W3C validator with no errors or warnings
+- Ran the style.css code through the W3C Jigsaw validator with no errors found
 
 ### Unfixed Bugs
 - Would like to finesse styling with the h3 headings in the question area div across all forms of media queries for a better responsive design
