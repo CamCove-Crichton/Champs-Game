@@ -85,6 +85,7 @@ To try to increase productivity with styling, devtools were used for the remaini
 - Issues with positioning in the game area styling section (Used devtools to see what was happening and made progress)
 - Issue with the :after element in displaying correctly - still needs more research and use of devtools (Decided to not utilise the :after and instead went with creating heading elements)
 - Need to sort the checkAnswer function to work correctly, possibly the two variables are not being seen as number values (Had assistance from Code Institute tutor support to sort this bug)
+- Need to see why when the level change is selected to a higher level and then back to a lower level that the data is not reassigned and stored in the variable currentLevel (Managed to use the debugger in the Devtools to find the issue in the function)
 
 ### Validator Testing
 
@@ -93,7 +94,6 @@ To try to increase productivity with styling, devtools were used for the remaini
 
 ### Unfixed Bugs
 - Would like to finesse styling with the h3 headings in the question area div across all forms of media queries for a better responsive design
-- Need to see why when the level change is selected to a higher level and then back to a lower level that the data is not reassigned and stored in the variable currentLevel
 
 ## Credits
 
