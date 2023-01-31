@@ -75,7 +75,7 @@ function runGame(gameType) {
         document.getElementById("computer-number").onmouseover = function popUp() {
             let popup = document.getElementById("hint-popup");
             popup.classList.toggle("show");
-            popup.innerText = `I am thinking between ${hintNum - 2} & ${hintNum +2}`;
+            popup.innerText = `I am thinking between ${hintNum - 1} & ${hintNum +2}`;
         }
 
     } else if (gameType === "level-two") {
@@ -87,7 +87,7 @@ function runGame(gameType) {
         document.getElementById("computer-number").onmouseover = function popUp() {
             let popup = document.getElementById("hint-popup");
             popup.classList.toggle("show");
-            popup.innerText = `I am thinking between ${hintNum - 2} & ${hintNum +2}`;
+            popup.innerText = `I am thinking between ${hintNum - 1} & ${hintNum +2}`;
         }
 
     } else if (gameType === "level-three") {
@@ -99,7 +99,7 @@ function runGame(gameType) {
         document.getElementById("computer-number").onmouseover = function popUp() {
             let popup = document.getElementById("hint-popup");
             popup.classList.toggle("show");
-            popup.innerText = `I am thinking between ${hintNum - 2} & ${hintNum +2}`;
+            popup.innerText = `I am thinking between ${hintNum - 1} & ${hintNum +2}`;
         }
 
     } else {
