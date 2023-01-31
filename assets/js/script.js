@@ -3,6 +3,7 @@ gameLevels();
 // declared variables required for use in functions
 let currentLevel;
 let hiddenNumber;
+let hintNum;
 
 // disabled the player input until a level is selected
 document.getElementById("player-number").disabled = true;
@@ -52,7 +53,6 @@ function runGame(gameType) {
     document.getElementById("player-number").focus();
     document.getElementById("computer-number").innerHTML = "?";
 
-
     // Generates numbers for the different levels
     // level 1 numbers
     let num1 = parseInt(Math.floor(Math.random() * 5) + 6);
@@ -67,11 +67,41 @@ function runGame(gameType) {
     let num6 = parseInt(Math.floor(Math.random() * 15) + 1);
 
     if (gameType === "level-one") {
+
         levelQuestion(num1, num2);
+        
+        hintNum = num2;
+
+        document.getElementById("computer-number").onmouseover = function popUp() {
+            let popup = document.getElementById("hint-popup");
+            popup.classList.toggle("show");
+            popup.innerText = `I am thinking between ${hintNum - 2} & ${hintNum +2}`;
+        }
+
     } else if (gameType === "level-two") {
+
         levelQuestion(num3, num4);
+
+        hintNum = num4;
+
+        document.getElementById("computer-number").onmouseover = function popUp() {
+            let popup = document.getElementById("hint-popup");
+            popup.classList.toggle("show");
+            popup.innerText = `I am thinking between ${hintNum - 2} & ${hintNum +2}`;
+        }
+
     } else if (gameType === "level-three") {
+
         levelQuestion(num5, num6);
+
+        hintNum = num6;
+
+        document.getElementById("computer-number").onmouseover = function popUp() {
+            let popup = document.getElementById("hint-popup");
+            popup.classList.toggle("show");
+            popup.innerText = `I am thinking between ${hintNum - 2} & ${hintNum +2}`;
+        }
+
     } else {
         alert("Please select a level to start the game");
     }
@@ -260,12 +290,12 @@ function gameOver() {
 
         document.getElementById("level2").style.backgroundColor = "#209CEE";
         document.getElementById("level2").style.color = "black";
-        
+
         document.getElementById("level3").style.backgroundColor = "#209CEE";
         document.getElementById("level3").style.color = "black";
 
         document.getElementById("player-number").disabled = true;
-        
+
     } else {
         runGame(currentLevel);
     }
@@ -287,7 +317,8 @@ function gameReset() {
 /**
  * A function to show a hint to help the player have a better chance of getting it right
  */
-function popUp() {
-    var popup = document.getElementById("hint-popup");
-    popup.classList.toggle("show");
-}
+// function popUp() {
+//     let popup = document.getElementById("hint-popup");
+//     popup.classList.toggle("show");
+//     popup.innerText = `I am thinking between ${num2 - 2} & ${num2 +2}`;
+// }
