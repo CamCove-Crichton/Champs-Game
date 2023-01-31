@@ -1,12 +1,14 @@
-// Check if the DOM content is loaded
-// Idea from Love Maths project
 gameLevels();
+
+// declared variables required for use in functions
 let currentLevel;
 let hiddenNumber;
-document.getElementById("player-number").disabled = true;
-// document.getElementById("level1").style.backgroundColor = "black";
-// document.getElementById("level1").style.color = "whitesmoke";
 
+// disabled the player input until a level is selected
+document.getElementById("player-number").disabled = true;
+
+// Check if the DOM content is loaded
+// Idea from Love Maths project
 document.addEventListener("DOMContentLoaded", function () {
     // code from Code Institute - Love Maths Project
     let buttons = document.getElementsByTagName("button");
@@ -71,8 +73,7 @@ function runGame(gameType) {
     } else if (gameType === "level-three") {
         levelQuestion(num5, num6);
     } else {
-        // alert(`Unknown game type: ${gameType}`);
-        // throw `Unknown game type: ${gameType}. Aborting!`;
+        alert("Please select a level to start the game");
     }
 
 }
@@ -281,4 +282,12 @@ function gameReset() {
 
     runGame(currentLevel);
 
+}
+
+/**
+ * A function to show a hint to help the player have a better chance of getting it right
+ */
+function popUp() {
+    var popup = document.getElementById("hint-popup");
+    popup.classList.toggle("show");
 }
