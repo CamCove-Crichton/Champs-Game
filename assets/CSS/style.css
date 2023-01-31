@@ -252,22 +252,23 @@ input::-webkit-inner-spin-button {
     height: 30%;
     position: absolute;
     left: 20%;
-    top: 40%;
+    top: 30%;
     background-color: #209CEE;
     color: black;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
+    box-shadow: 5px 5px 5px #555;
 }
 
 #level-select,
 #ok {
     text-align: center;
+    padding: 5px;
 }
 
 #ok {
-    padding: 10px;
     position: relative;
-    left: 50%;
+    left: 37.5%;
     bottom: 1%;
     border: 1px solid black;
     border-radius: 5px;
@@ -297,9 +298,14 @@ input::-webkit-inner-spin-button {
         font-size: 5rem;
     }
 
-    /* .question-h3 {
-        margin: 5px 15px 15px;
-    } */
+    #ok {
+        left: 42.5%;
+    }
+
+    #level-select,
+    #ok {
+        padding: 10px;
+    }
 
     #player-h3 {
         position: relative;
@@ -391,6 +397,15 @@ input::-webkit-inner-spin-button {
     #instructions {
         margin: 15px;
     }
+
+    #level-select-div {
+        height: 25%;
+        top: 45%;
+    }
+
+    #ok {
+        left: 45%;
+    }
 }
 
 /* for screens 1000px and above */
@@ -422,5 +437,9 @@ input::-webkit-inner-spin-button {
 
     .scores {
         margin: 30px 90px 15px 90px;
+    }
+
+    #ok {
+        left: 47.5%;
     }
 }
