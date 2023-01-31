@@ -156,6 +156,96 @@ To try to increase productivity with styling, devtools were used for the remaini
 }
 ```
 
+- Code for the popup in the index.html file from W3 Schools
+[W3 Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup)
+```
+{
+    <div class="user popup" onclick="popUp()">
+                    <span class="popuptext" id="hint-popup">Test</span>
+                    <p id="computer-number" data-entry="computer">?</p>
+                </div>
+}
+```
+
+- Code for the popup in the style.css file from W3 Schools
+[W3 Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup)
+```
+{
+    /* code from W3 Schools */
+/* popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* code from W3 Schools */
+/* actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -40px;
+    font-size: 1.3rem;
+}
+
+/* code from W3 Schools */
+/* popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* code from W3 Schools */
+/* hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* code from W3 Schools */
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+}
+```
+
 #### script.js Credits
 
 - Idea to check DOMContentLoaded as well as some function name idea from the Code Institute - Love Maths Project
@@ -329,6 +419,17 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(checkAnswer, 1000);
         }
     })
+}
+```
+
+- - Code for the popup in the script.js file from W3 Schools
+[W3 Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup)
+```
+{
+    function popUp() {
+    var popup = document.getElementById("hint-popup");
+    popup.classList.toggle("show");
+}
 }
 ```
 
