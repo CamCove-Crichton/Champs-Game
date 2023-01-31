@@ -69,7 +69,7 @@ function runGame(gameType) {
     if (gameType === "level-one") {
 
         levelQuestion(num1, num2);
-        
+
         hintNum = num2;
 
         document.getElementById("computer-number").onmouseover = function popUp() {
@@ -103,7 +103,8 @@ function runGame(gameType) {
         }
 
     } else {
-        alert("Please select a level to start the game");
+        // alert("Please select a level to start the game");
+        selectLevelMessage();
     }
 
 }
@@ -315,10 +316,33 @@ function gameReset() {
 }
 
 /**
- * A function to show a hint to help the player have a better chance of getting it right
+ * A function to display a message to the player to select a level to start the game
  */
-// function popUp() {
-//     let popup = document.getElementById("hint-popup");
-//     popup.classList.toggle("show");
-//     popup.innerText = `I am thinking between ${num2 - 2} & ${num2 +2}`;
-// }
+function selectLevelMessage() {
+
+    let body = document.body;
+
+    let newDiv = document.createElement("div");
+
+    newDiv.style.width = "50%";
+    newDiv.style.height = "20%";
+    newDiv.style.position = "absolute";
+    newDiv.style.left = "25%";
+    newDiv.style.top = "40%";
+    newDiv.style.backgroundColor = "#209CEE";
+    newDiv.style.color = "black";
+
+    newDiv.innerHTML = `
+        <h2>Please select a level to start the game</h2>
+        <button id="ok">OK</button>
+        `;
+
+    body.appendChild(newDiv);
+
+    document.addEventListener('click', function () {
+        if (this.getElementById("ok").innerText === "OK") {
+            newDiv.remove();
+        }
+    })
+
+}
