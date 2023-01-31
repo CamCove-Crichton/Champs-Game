@@ -6,6 +6,7 @@
 - The player must try to match the target number by entering a number
 - The computer will also generate a number once the player has put their number in
 - If the sum of the players number and the computers number matches the target number, the player gets a point, if not then the computer gets a point
+- If the player is struggling, they can hover over the question mark to get a hint of what the computer is thinking of
 
 ## Deployment
 
@@ -76,6 +77,7 @@ To try to increase productivity with styling, devtools were used for the remaini
 - Added an event listener so the user can press enter to submit their answer
 - Added styling code to the Javascript file in the gameLevels function to style the level buttons to indicate which level the game is currently set to
 - Added code to the gameLevels function to disable the level buttons once a level is selected to start the game, and will be disabled until the game is over, at which point the player will be able to select another level to play another game of Champs
+- Decided to add in a hint for the player, when the mouse moves over the question mark, it will display a range that the computer is thinking of
 
 ### Finished Game Screen Grabs
 
