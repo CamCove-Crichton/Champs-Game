@@ -311,6 +311,8 @@ function gameReset() {
     document.getElementById("player-score").innerHTML = "0";
     document.getElementById("computer-score").innerHTML = "0";
 
+    selectLevelMessage();
+
     runGame(currentLevel);
 
 }
@@ -323,27 +325,12 @@ function selectLevelMessage() {
     let body = document.body;
 
     let newDiv = document.createElement("div");
-
     newDiv.id = "level-select-div";
-
-    // newDiv.style.width = "60%";
-    // newDiv.style.height = "30%";
-    // newDiv.style.position = "absolute";
-    // newDiv.style.left = "20%";
-    // newDiv.style.top = "40%";
-    // newDiv.style.backgroundColor = "#209CEE";
-    // newDiv.style.color = "black";
-    // newDiv.style.border = "1px solid black";
-    // newDiv.style.borderRadius = "5px";
 
     newDiv.innerHTML = `
         <h2 id="level-select">Please select a level to start the game</h2>
         <button id="ok">OK</button>
         `;
-
-    // let popupMessage = document.getElementById("level-select");
-
-    // popupMessage.style.textAlign = "center";
 
     body.appendChild(newDiv);
 
