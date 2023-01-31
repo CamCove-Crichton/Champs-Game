@@ -246,6 +246,33 @@ input::-webkit-inner-spin-button {
     color: red;
 }
 
+/* Select level message styling */
+#level-select-div {
+    width: 60%;
+    height: 30%;
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    background-color: #209CEE;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#level-select,
+#ok {
+    text-align: center;
+}
+
+#ok {
+    padding: 10px;
+    position: relative;
+    left: 50%;
+    bottom: 1%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
 /* footer styling */
 #footer-h2 {
     line-height: 2.5rem;
