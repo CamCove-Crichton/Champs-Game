@@ -284,10 +284,6 @@ function gameOver() {
 
         selectLevelMessage();
 
-        // document.getElementById("level1").disabled = false;
-        // document.getElementById("level2").disabled = false;
-        // document.getElementById("level3").disabled = false;
-
         document.getElementById("level1").style.backgroundColor = "#209CEE";
         document.getElementById("level1").style.color = "black";
 
@@ -300,7 +296,9 @@ function gameOver() {
         document.getElementById("player-number").disabled = true;
 
     } else {
+
         runGame(currentLevel);
+
     }
 
 }
@@ -323,6 +321,8 @@ function gameReset() {
  * A function to display a message to the player to select a level to start the game
  */
 function selectLevelMessage() {
+
+    document.getElementById("num-target").innerHTML = "0";
 
     let body = document.body;
 
