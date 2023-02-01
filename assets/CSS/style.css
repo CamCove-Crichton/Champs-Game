@@ -179,7 +179,6 @@ footer {
 
 .question-h3 {
     font-size: 1rem;
-    /* margin: 5px 5px 15px; */
     padding: 5px;
     width: 75px;
     display: inline-block;
@@ -195,26 +194,12 @@ footer {
     right: -15px;
 }
 
-/* .user > .question-h3 {
-    text-align: center;
-} */
-
-/* Code from Love Maths project */
-/* .user::after {
-    content: attr(data-entry);
-    font-size: 1rem;
-    color: black;
-    position: relative;
-    left: -0.5rem;
-    top: 1.5rem;
-} */
-
 /* Idea from w3schools */
-/* input::-webkit-outer-spin-button,
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-} */
+}
 
 #submit {
     width: 180px;
@@ -373,7 +358,6 @@ input::-webkit-inner-spin-button {
     }
 
     .user {
-        /* margin: 0 30px; */
         padding: 10px;
         height: 60px;
         width: 90px;
@@ -387,7 +371,6 @@ input::-webkit-inner-spin-button {
 
     .question-h3 {
         font-size: 1.5rem;
-        /* margin: 5px 50px 15px; */
         width: 120px;
     }
 
