@@ -126,7 +126,8 @@ function checkAnswer() {
         answerMessage();
         playerScore();
     } else {
-        alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer[0]}, try again`);
+        // alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer[0]}, try again`);
+        wrongAnswerMessage();
         computerScore();
     }
 
@@ -182,7 +183,7 @@ function levelQuestion(numTarget, numComputer) {
 }
 
 /**
- * A function to determin the current level of the game
+ * A function to determine the current level of the game
  */
 function gameLevels() {
 
@@ -381,7 +382,7 @@ function answerMessage() {
     newDivCorrectAnswer.id = "correct-answer-div";
 
     newDivCorrectAnswer.innerHTML = `
-        <h2 id="correct-message">Well done! You got it right <i class="fa-regular fa-face-smile"></i></h2>
+        <h2 id="correct-message">Well done! You got it right <i class="fa-solid fa-face-laugh-beam"></i></h2>
         <button id="ok1">OK</button>
         `;
 
@@ -403,6 +404,7 @@ function answerMessage() {
             document.getElementById("level3").disabled = false;
             document.getElementById("submit").disabled = false;
             document.getElementById("player-number").disabled = false;
+            document.getElementById("player-number").focus();
 
         }
     })
@@ -411,6 +413,61 @@ function answerMessage() {
         if (event.key === "Enter") {
 
             newDivCorrectAnswer.remove();
+
+            document.getElementById("level1").disabled = false;
+            document.getElementById("level2").disabled = false;
+            document.getElementById("level3").disabled = false;
+            document.getElementById("submit").disabled = false;
+            document.getElementById("player-number").disabled = false;
+            document.getElementById("player-number").focus();
+
+        }
+    })
+
+}
+
+/**
+ * A function to display a message when the player gets the answer wrong
+ */
+function wrongAnswerMessage() {
+
+    let body = document.body;
+
+    let newDivWrongAnswer = document.createElement("div");
+    newDivWrongAnswer.id = "wrong-answer-div";
+
+    newDivWrongAnswer.innerHTML = `
+        <h2 id="wrong-message">Sorry, that is incorrect, try again <i class="fa-solid fa-face-dizzy"></i></h2>
+        <button id="ok2">OK</button>
+        `;
+
+    body.appendChild(newDivWrongAnswer);
+
+    document.getElementById("level1").disabled = true;
+    document.getElementById("level2").disabled = true;
+    document.getElementById("level3").disabled = true;
+    document.getElementById("submit").disabled = true;
+    document.getElementById("player-number").disabled = true;
+
+    document.addEventListener('click', function () {
+        if (this.getElementById("ok2").innerText === "OK") {
+
+            newDivWrongAnswer.remove();
+
+            document.getElementById("level1").disabled = false;
+            document.getElementById("level2").disabled = false;
+            document.getElementById("level3").disabled = false;
+            document.getElementById("submit").disabled = false;
+            document.getElementById("player-number").disabled = false;
+            document.getElementById("player-number").focus();
+
+        }
+    })
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Enter") {
+
+            newDivWrongAnswer.remove();
 
             document.getElementById("level1").disabled = false;
             document.getElementById("level2").disabled = false;
