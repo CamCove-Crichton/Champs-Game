@@ -343,6 +343,20 @@ function selectLevelMessage() {
 
     document.addEventListener('click', function () {
         if (this.getElementById("ok").innerText === "OK") {
+
+            newDiv.remove();
+
+            document.getElementById("level1").disabled = false;
+            document.getElementById("level2").disabled = false;
+            document.getElementById("level3").disabled = false;
+            document.getElementById("submit").disabled = false;
+
+        }
+    })
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Enter") {
+
             newDiv.remove();
 
             document.getElementById("level1").disabled = false;
