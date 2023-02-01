@@ -79,6 +79,7 @@ To try to increase productivity with styling, devtools were used for the remaini
 - Added code to the gameLevels function to disable the level buttons once a level is selected to start the game, and will be disabled until the game is over, at which point the player will be able to select another level to play another game of Champs
 - Decided to add in a hint for the player, when the mouse moves over the question mark, it will display a range that the computer is thinking of
 - Decided to add in a function to display a message to the player to prompt them to choose a level in order to start the game
+- Added in a function to display a message when the player gets the answer right or wrong, and when the player wins or loses the game, as opposed to just an alert box
 
 ### Finished Game Screen Grabs
 
