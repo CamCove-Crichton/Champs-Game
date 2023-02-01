@@ -254,7 +254,8 @@ input::-webkit-inner-spin-button {
 }
 
 /* Select level message styling */
-#level-select-div {
+#level-select-div,
+#correct-answer-div {
     width: 60%;
     height: 30%;
     position: absolute;
@@ -268,12 +269,15 @@ input::-webkit-inner-spin-button {
 }
 
 #level-select,
-#ok {
+#correct-message,
+#ok,
+#ok1 {
     text-align: center;
     padding: 5px;
 }
 
-#ok {
+#ok,
+#ok1 {
     position: relative;
     left: 37.5%;
     bottom: 1%;
@@ -281,7 +285,8 @@ input::-webkit-inner-spin-button {
     border-radius: 5px;
 }
 
-#ok:hover {
+#ok:hover,
+#ok1:hover {
     box-shadow: 2px 2px 2px #555;
 }
 
@@ -309,12 +314,15 @@ input::-webkit-inner-spin-button {
         font-size: 5rem;
     }
 
-    #ok {
+    #ok,
+    #ok1 {
         left: 42.5%;
     }
 
     #level-select,
-    #ok {
+    #correct-message,
+    #ok,
+    #ok1 {
         padding: 10px;
     }
 
@@ -414,7 +422,8 @@ input::-webkit-inner-spin-button {
         top: 45%;
     }
 
-    #ok {
+    #ok,
+    #ok1 {
         left: 45%;
     }
 }
@@ -450,7 +459,8 @@ input::-webkit-inner-spin-button {
         margin: 30px 90px 15px 90px;
     }
 
-    #ok {
+    #ok,
+    ok1 {
         left: 47.5%;
     }
 }

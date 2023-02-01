@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
+    
     // Code from the Code Institute - Love Maths project
     document.getElementById("player-number").addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
@@ -122,7 +122,8 @@ function checkAnswer() {
     let isCorrect = goalTarget === calculatedAnswer[0];
 
     if (isCorrect) {
-        alert("Well done, you got it right :D");
+        // alert("Well done, you got it right :D");
+        answerMessage();
         playerScore();
     } else {
         alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer[0]}, try again`);
@@ -363,6 +364,60 @@ function selectLevelMessage() {
             document.getElementById("level2").disabled = false;
             document.getElementById("level3").disabled = false;
             document.getElementById("submit").disabled = false;
+
+        }
+    })
+
+}
+
+/**
+ * A function to display a message when the player gets an answer correct
+ */
+function answerMessage() {
+
+    let body = document.body;
+
+    let newDivCorrectAnswer = document.createElement("div");
+    newDivCorrectAnswer.id = "correct-answer-div";
+
+    newDivCorrectAnswer.innerHTML = `
+        <h2 id="correct-message">Well done! You got it right <i class="fa-regular fa-face-smile"></i></h2>
+        <button id="ok1">OK</button>
+        `;
+
+    body.appendChild(newDivCorrectAnswer);
+
+    document.getElementById("level1").disabled = true;
+    document.getElementById("level2").disabled = true;
+    document.getElementById("level3").disabled = true;
+    document.getElementById("submit").disabled = true;
+    document.getElementById("player-number").disabled = true;
+
+    document.addEventListener('click', function () {
+        if (this.getElementById("ok1").innerText === "OK") {
+
+            newDivCorrectAnswer.remove();
+
+            document.getElementById("level1").disabled = false;
+            document.getElementById("level2").disabled = false;
+            document.getElementById("level3").disabled = false;
+            document.getElementById("submit").disabled = false;
+            document.getElementById("player-number").disabled = false;
+
+        }
+    })
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Enter") {
+
+            newDivCorrectAnswer.remove();
+
+            document.getElementById("level1").disabled = false;
+            document.getElementById("level2").disabled = false;
+            document.getElementById("level3").disabled = false;
+            document.getElementById("submit").disabled = false;
+            document.getElementById("player-number").disabled = false;
+            document.getElementById("player-number").focus();
 
         }
     })
