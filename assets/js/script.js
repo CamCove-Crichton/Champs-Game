@@ -261,9 +261,10 @@ function gameOver() {
 
     if (document.getElementById("player-score").innerHTML === "10") {
 
-        alert("Congratulations! You have won the game :D Let's play again");
+        // alert("Congratulations! You have won the game :D Let's play again");
+        winnerMessage();
 
-        gameReset();
+        // gameReset();
 
         document.getElementById("level1").disabled = false;
         document.getElementById("level2").disabled = false;
@@ -475,6 +476,63 @@ function wrongAnswerMessage() {
             document.getElementById("submit").disabled = false;
             document.getElementById("player-number").disabled = false;
             document.getElementById("player-number").focus();
+
+        }
+    })
+
+}
+
+/**
+ * A function to display a message when the player wins the game
+ */
+function winnerMessage() {
+
+    let body = document.body;
+
+    let newDivWinnerAnswer = document.createElement("div");
+    newDivWinnerAnswer.id = "winner-answer-div";
+
+    newDivWinnerAnswer.innerHTML = `
+        <h2 id="winner-message"><i class="fa-solid fa-crown"></i> Congratulations! <i class="fa-solid fa-crown"></i> You WON!! </h2>
+        <button id="ok3">OK</button>
+        `;
+
+    body.appendChild(newDivWinnerAnswer);
+
+    document.getElementById("level1").disabled = true;
+    document.getElementById("level2").disabled = true;
+    document.getElementById("level3").disabled = true;
+    document.getElementById("submit").disabled = true;
+    document.getElementById("player-number").disabled = true;
+
+    document.addEventListener('click', function () {
+        if (this.getElementById("ok3").innerText === "OK") {
+
+            newDivWinnerAnswer.remove();
+
+            document.getElementById("level1").disabled = false;
+            document.getElementById("level2").disabled = false;
+            document.getElementById("level3").disabled = false;
+            document.getElementById("submit").disabled = false;
+            // document.getElementById("player-number").disabled = false;
+            // document.getElementById("player-number").focus();
+            gameReset();
+
+        }
+    })
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Enter") {
+
+            newDivWinnerAnswer.remove();
+
+            document.getElementById("level1").disabled = false;
+            document.getElementById("level2").disabled = false;
+            document.getElementById("level3").disabled = false;
+            document.getElementById("submit").disabled = false;
+            // document.getElementById("player-number").disabled = false;
+            // document.getElementById("player-number").focus();
+            gameReset();
 
         }
     })

@@ -241,7 +241,8 @@ input::-webkit-inner-spin-button {
 /* Select level message styling */
 #level-select-div,
 #correct-answer-div,
-#wrong-answer-div {
+#wrong-answer-div,
+#winner-answer-div {
     width: 60%;
     height: 30%;
     position: absolute;
@@ -257,16 +258,19 @@ input::-webkit-inner-spin-button {
 #level-select,
 #correct-message,
 #wrong-message,
+#winner-message,
 #ok,
 #ok1,
-#ok2 {
+#ok2,
+#ok3 {
     text-align: center;
     padding: 5px;
 }
 
 #ok,
 #ok1,
-#ok2 {
+#ok2,
+#ok3 {
     position: relative;
     left: 40%;
     bottom: 1%;
@@ -276,7 +280,8 @@ input::-webkit-inner-spin-button {
 
 #ok:hover,
 #ok1:hover,
-#ok2:hover {
+#ok2:hover,
+#ok3 {
     box-shadow: 2px 2px 2px #555;
 }
 
@@ -306,16 +311,19 @@ input::-webkit-inner-spin-button {
 
     #ok,
     #ok1,
-    #ok2 {
+    #ok2,
+    #ok3 {
         left: 42.5%;
     }
 
     #level-select,
     #correct-message,
     #wrong-message,
+    #winner-message,
     #ok,
     #ok1,
-    #ok2 {
+    #ok2,
+    #ok3 {
         padding: 10px;
     }
 
@@ -415,7 +423,8 @@ input::-webkit-inner-spin-button {
 
     #ok,
     #ok1,
-    #ok2 {
+    #ok2,
+    #ok3 {
         left: 45%;
     }
 }
@@ -453,7 +462,8 @@ input::-webkit-inner-spin-button {
 
     #ok,
     #ok1,
-    #ok2 {
+    #ok2,
+    #ok3 {
         left: 47.5%;
     }
 }
