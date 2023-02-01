@@ -334,9 +334,20 @@ function selectLevelMessage() {
 
     body.appendChild(newDiv);
 
+    document.getElementById("level1").disabled = true;
+    document.getElementById("level2").disabled = true;
+    document.getElementById("level3").disabled = true;
+    document.getElementById("submit").disabled = true;
+
     document.addEventListener('click', function () {
         if (this.getElementById("ok").innerText === "OK") {
             newDiv.remove();
+
+            document.getElementById("level1").disabled = false;
+            document.getElementById("level2").disabled = false;
+            document.getElementById("level3").disabled = false;
+            document.getElementById("submit").disabled = false;
+
         }
     })
 
