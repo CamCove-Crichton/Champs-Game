@@ -55,6 +55,7 @@ footer {
 .levels:hover {
     background-color: black;
     color: whitesmoke;
+    box-shadow: 5px 5px 5px #555;
 }
 
 #target-h2 {
@@ -225,6 +226,12 @@ input::-webkit-inner-spin-button {
     background-color: #209CEE;
 }
 
+#submit:hover {
+    background-color: black;
+    color: #209CEE;
+    box-shadow: 5px 5px 5px #555;
+}
+
 /* score styling */
 .scores {
     font-size: 1rem;
@@ -272,6 +279,10 @@ input::-webkit-inner-spin-button {
     bottom: 1%;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+#ok:hover {
+    box-shadow: 2px 2px 2px #555;
 }
 
 /* footer styling */

@@ -195,6 +195,7 @@ function gameLevels() {
 
                 document.getElementById("level1").style.backgroundColor = "black";
                 document.getElementById("level1").style.color = "#209CEE";
+                document.getElementById("level1").style.boxShadow = "5px 5px 5px #555";
 
                 document.getElementById("level2").style.backgroundColor = "#D3D3D3";
                 document.getElementById("level2").style.color = "grey";
@@ -214,6 +215,7 @@ function gameLevels() {
 
                 document.getElementById("level2").style.backgroundColor = "black";
                 document.getElementById("level2").style.color = "#209CEE";
+                document.getElementById("level2").style.boxShadow = "5px 5px 5px #555";
 
                 document.getElementById("level1").style.backgroundColor = "#D3D3D3";
                 document.getElementById("level1").style.color = "grey";
@@ -233,6 +235,7 @@ function gameLevels() {
 
                 document.getElementById("level3").style.backgroundColor = "black";
                 document.getElementById("level3").style.color = "#209CEE";
+                document.getElementById("level3").style.boxShadow = "5px 5px 5px #555";
 
                 document.getElementById("level1").style.backgroundColor = "#D3D3D3";
                 document.getElementById("level1").style.color = "grey";
