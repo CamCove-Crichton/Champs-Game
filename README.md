@@ -106,6 +106,8 @@ To try to increase productivity with styling, devtools were used for the remaini
 
 ### Unfixed Bugs
 - Would like to finesse styling with the h3 headings in the question area div across all forms of media queries for a better responsive design
+- Need to find the bug for the keydown === "Enter" that is enabling the level buttons after clearing the message box
+- Need to find the bug that is displaying the 'Correct Answer' message after you win the game and close the 'Winner' message
 
 ## Credits
 
