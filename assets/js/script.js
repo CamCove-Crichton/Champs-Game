@@ -266,9 +266,9 @@ function gameOver() {
 
         // gameReset();
 
-        document.getElementById("level1").disabled = false;
-        document.getElementById("level2").disabled = false;
-        document.getElementById("level3").disabled = false;
+        // document.getElementById("level1").disabled = false;
+        // document.getElementById("level2").disabled = false;
+        // document.getElementById("level3").disabled = false;
 
         document.getElementById("level1").style.backgroundColor = "#209CEE";
         document.getElementById("level1").style.color = "black";
@@ -316,6 +316,8 @@ function gameReset() {
 
     // selectLevelMessage();
 
+    currentLevel = "Reset";
+
     runGame(currentLevel);
 
 }
@@ -344,8 +346,7 @@ function selectLevelMessage() {
     document.getElementById("level3").disabled = true;
     document.getElementById("submit").disabled = true;
 
-    document.addEventListener('click', function () {
-        if (this.getElementById("ok").innerText === "OK") {
+    document.getElementById("ok").onclick = function () {
 
             newDiv.remove();
 
@@ -355,7 +356,6 @@ function selectLevelMessage() {
             document.getElementById("submit").disabled = false;
 
         }
-    })
 
     document.addEventListener('keydown', function(event) {
         if (event.key === "Enter") {
@@ -395,29 +395,27 @@ function answerMessage() {
     document.getElementById("submit").disabled = true;
     document.getElementById("player-number").disabled = true;
 
-    document.addEventListener('click', function () {
-        if (this.getElementById("ok1").innerText === "OK") {
+    document.getElementById("ok1").onclick = function () {
 
             newDivCorrectAnswer.remove();
 
-            document.getElementById("level1").disabled = false;
-            document.getElementById("level2").disabled = false;
-            document.getElementById("level3").disabled = false;
+            // document.getElementById("level1").disabled = false;
+            // document.getElementById("level2").disabled = false;
+            // document.getElementById("level3").disabled = false;
             document.getElementById("submit").disabled = false;
             document.getElementById("player-number").disabled = false;
             document.getElementById("player-number").focus();
 
-        }
-    })
+    }
 
     document.addEventListener('keydown', function(event) {
         if (event.key === "Enter") {
 
             newDivCorrectAnswer.remove();
 
-            document.getElementById("level1").disabled = false;
-            document.getElementById("level2").disabled = false;
-            document.getElementById("level3").disabled = false;
+            // document.getElementById("level1").disabled = false;
+            // document.getElementById("level2").disabled = false;
+            // document.getElementById("level3").disabled = false;
             document.getElementById("submit").disabled = false;
             document.getElementById("player-number").disabled = false;
             document.getElementById("player-number").focus();
@@ -450,29 +448,27 @@ function wrongAnswerMessage() {
     document.getElementById("submit").disabled = true;
     document.getElementById("player-number").disabled = true;
 
-    document.addEventListener('click', function () {
-        if (this.getElementById("ok2").innerText === "OK") {
+    document.getElementById("ok2").onclick = function () {
 
             newDivWrongAnswer.remove();
 
-            document.getElementById("level1").disabled = false;
-            document.getElementById("level2").disabled = false;
-            document.getElementById("level3").disabled = false;
+            // document.getElementById("level1").disabled = false;
+            // document.getElementById("level2").disabled = false;
+            // document.getElementById("level3").disabled = false;
             document.getElementById("submit").disabled = false;
             document.getElementById("player-number").disabled = false;
             document.getElementById("player-number").focus();
 
         }
-    })
 
     document.addEventListener('keydown', function(event) {
         if (event.key === "Enter") {
 
             newDivWrongAnswer.remove();
 
-            document.getElementById("level1").disabled = false;
-            document.getElementById("level2").disabled = false;
-            document.getElementById("level3").disabled = false;
+            // document.getElementById("level1").disabled = false;
+            // document.getElementById("level2").disabled = false;
+            // document.getElementById("level3").disabled = false;
             document.getElementById("submit").disabled = false;
             document.getElementById("player-number").disabled = false;
             document.getElementById("player-number").focus();
@@ -487,6 +483,12 @@ function wrongAnswerMessage() {
  */
 function winnerMessage() {
 
+    document.getElementById("level1").disabled = true;
+    document.getElementById("level2").disabled = true;
+    document.getElementById("level3").disabled = true;
+    document.getElementById("submit").disabled = true;
+    document.getElementById("player-number").disabled = true;
+
     let body = document.body;
 
     let newDivWinnerAnswer = document.createElement("div");
@@ -499,40 +501,34 @@ function winnerMessage() {
 
     body.appendChild(newDivWinnerAnswer);
 
-    document.getElementById("level1").disabled = true;
-    document.getElementById("level2").disabled = true;
-    document.getElementById("level3").disabled = true;
-    document.getElementById("submit").disabled = true;
-    document.getElementById("player-number").disabled = true;
-
-    document.addEventListener('click', function () {
-        if (this.getElementById("ok3").innerText === "OK") {
+    document.getElementById("ok3").onclick = function () {
 
             newDivWinnerAnswer.remove();
 
-            document.getElementById("level1").disabled = false;
-            document.getElementById("level2").disabled = false;
-            document.getElementById("level3").disabled = false;
-            document.getElementById("submit").disabled = false;
-            // document.getElementById("player-number").disabled = false;
-            // document.getElementById("player-number").focus();
             gameReset();
 
+            // document.getElementById("level1").disabled = false;
+            // document.getElementById("level2").disabled = false;
+            // document.getElementById("level3").disabled = false;
+            // document.getElementById("submit").disabled = false;
+            // document.getElementById("player-number").disabled = false;
+            // document.getElementById("player-number").focus();
+
         }
-    })
 
     document.addEventListener('keydown', function(event) {
         if (event.key === "Enter") {
 
             newDivWinnerAnswer.remove();
 
-            document.getElementById("level1").disabled = false;
-            document.getElementById("level2").disabled = false;
-            document.getElementById("level3").disabled = false;
-            document.getElementById("submit").disabled = false;
+            gameReset();
+
+            // document.getElementById("level1").disabled = false;
+            // document.getElementById("level2").disabled = false;
+            // document.getElementById("level3").disabled = false;
+            // document.getElementById("submit").disabled = false;
             // document.getElementById("player-number").disabled = false;
             // document.getElementById("player-number").focus();
-            gameReset();
 
         }
     })
