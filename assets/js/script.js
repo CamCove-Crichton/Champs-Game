@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-    
+
     // Code from the Code Institute - Love Maths project
     document.getElementById("player-number").addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function runGame(gameType) {
     console.log("game type", gameType);
 
-    document.getElementById("player-number").value = " ";
+    document.getElementById("player-number").value = "";
     document.getElementById("player-number").focus();
     document.getElementById("computer-number").innerHTML = "?";
 
@@ -103,8 +103,9 @@ function runGame(gameType) {
         }
 
     } else {
-        // alert("Please select a level to start the game");
+
         selectLevelMessage();
+
     }
 
 }
@@ -209,6 +210,7 @@ function gameLevels() {
                 document.getElementById("level3").disabled = true;
 
                 document.getElementById("player-number").disabled = false;
+                document.getElementById("submit").disabled = false;
 
             } else if (this.getAttribute("data-entry") === "level-two") {
 
@@ -228,6 +230,7 @@ function gameLevels() {
                 document.getElementById("level3").disabled = true;
 
                 document.getElementById("player-number").disabled = false;
+                document.getElementById("submit").disabled = false;
 
             } else if (this.getAttribute("data-entry") === "level-three") {
 
@@ -247,6 +250,7 @@ function gameLevels() {
                 document.getElementById("level3").disabled = true;
 
                 document.getElementById("player-number").disabled = false;
+                document.getElementById("submit").disabled = false;
 
             }
         })
@@ -345,19 +349,20 @@ function selectLevelMessage() {
     document.getElementById("level2").disabled = true;
     document.getElementById("level3").disabled = true;
     document.getElementById("submit").disabled = true;
+    document.getElementById("player-number").disabled = true;
 
     document.getElementById("ok").onclick = function () {
 
-            newDiv.remove();
+        newDiv.remove();
 
-            document.getElementById("level1").disabled = false;
-            document.getElementById("level2").disabled = false;
-            document.getElementById("level3").disabled = false;
-            document.getElementById("submit").disabled = false;
+        document.getElementById("level1").disabled = false;
+        document.getElementById("level2").disabled = false;
+        document.getElementById("level3").disabled = false;
+        // document.getElementById("submit").disabled = false;
 
-        }
+    }
 
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener('keydown', function (event) {
         if (event.key === "Enter") {
 
             newDiv.remove();
@@ -365,7 +370,7 @@ function selectLevelMessage() {
             document.getElementById("level1").disabled = false;
             document.getElementById("level2").disabled = false;
             document.getElementById("level3").disabled = false;
-            document.getElementById("submit").disabled = false;
+            // document.getElementById("submit").disabled = false;
 
         }
     })
@@ -397,18 +402,18 @@ function answerMessage() {
 
     document.getElementById("ok1").onclick = function () {
 
-            newDivCorrectAnswer.remove();
+        newDivCorrectAnswer.remove();
 
-            // document.getElementById("level1").disabled = false;
-            // document.getElementById("level2").disabled = false;
-            // document.getElementById("level3").disabled = false;
-            document.getElementById("submit").disabled = false;
-            document.getElementById("player-number").disabled = false;
-            document.getElementById("player-number").focus();
+        // document.getElementById("level1").disabled = false;
+        // document.getElementById("level2").disabled = false;
+        // document.getElementById("level3").disabled = false;
+        document.getElementById("submit").disabled = false;
+        document.getElementById("player-number").disabled = false;
+        document.getElementById("player-number").focus();
 
     }
 
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener('keydown', function (event) {
         if (event.key === "Enter") {
 
             newDivCorrectAnswer.remove();
@@ -422,6 +427,12 @@ function answerMessage() {
 
         }
     })
+
+    if (document.getElementById("player-score").innerHTML === "10") {
+
+        newDivCorrectAnswer.remove();
+
+    }
 
     playerScore();
 
@@ -452,18 +463,18 @@ function wrongAnswerMessage() {
 
     document.getElementById("ok2").onclick = function () {
 
-            newDivWrongAnswer.remove();
+        newDivWrongAnswer.remove();
 
-            // document.getElementById("level1").disabled = false;
-            // document.getElementById("level2").disabled = false;
-            // document.getElementById("level3").disabled = false;
-            document.getElementById("submit").disabled = false;
-            document.getElementById("player-number").disabled = false;
-            document.getElementById("player-number").focus();
+        // document.getElementById("level1").disabled = false;
+        // document.getElementById("level2").disabled = false;
+        // document.getElementById("level3").disabled = false;
+        document.getElementById("submit").disabled = false;
+        document.getElementById("player-number").disabled = false;
+        document.getElementById("player-number").focus();
 
-        }
+    }
 
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener('keydown', function (event) {
         if (event.key === "Enter") {
 
             newDivWrongAnswer.remove();
@@ -505,20 +516,20 @@ function winnerMessage() {
 
     document.getElementById("ok3").onclick = function () {
 
-            newDivWinnerAnswer.remove();
+        newDivWinnerAnswer.remove();
 
-            gameReset();
+        gameReset();
 
-            // document.getElementById("level1").disabled = false;
-            // document.getElementById("level2").disabled = false;
-            // document.getElementById("level3").disabled = false;
-            // document.getElementById("submit").disabled = false;
-            // document.getElementById("player-number").disabled = false;
-            // document.getElementById("player-number").focus();
+        // document.getElementById("level1").disabled = false;
+        // document.getElementById("level2").disabled = false;
+        // document.getElementById("level3").disabled = false;
+        // document.getElementById("submit").disabled = false;
+        // document.getElementById("player-number").disabled = false;
+        // document.getElementById("player-number").focus();
 
-        }
+    }
 
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener('keydown', function (event) {
         if (event.key === "Enter") {
 
             newDivWinnerAnswer.remove();
