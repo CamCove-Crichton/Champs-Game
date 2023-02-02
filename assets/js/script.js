@@ -124,7 +124,7 @@ function checkAnswer() {
     if (isCorrect) {
         // alert("Well done, you got it right :D");
         answerMessage();
-        playerScore();
+        // playerScore();
     } else {
         // alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer[0]}, try again`);
         wrongAnswerMessage();
@@ -270,14 +270,14 @@ function gameOver() {
         // document.getElementById("level2").disabled = false;
         // document.getElementById("level3").disabled = false;
 
-        document.getElementById("level1").style.backgroundColor = "#209CEE";
-        document.getElementById("level1").style.color = "black";
+        // document.getElementById("level1").style.backgroundColor = "#209CEE";
+        // document.getElementById("level1").style.color = "black";
 
-        document.getElementById("level2").style.backgroundColor = "#209CEE";
-        document.getElementById("level2").style.color = "black";
+        // document.getElementById("level2").style.backgroundColor = "#209CEE";
+        // document.getElementById("level2").style.color = "black";
 
-        document.getElementById("level3").style.backgroundColor = "#209CEE";
-        document.getElementById("level3").style.color = "black";
+        // document.getElementById("level3").style.backgroundColor = "#209CEE";
+        // document.getElementById("level3").style.color = "black";
 
     } else if (document.getElementById("computer-score").innerHTML === "10") {
 
@@ -285,7 +285,7 @@ function gameOver() {
 
         gameReset();
 
-        selectLevelMessage();
+        // selectLevelMessage();
 
         document.getElementById("level1").style.backgroundColor = "#209CEE";
         document.getElementById("level1").style.color = "black";
@@ -422,6 +422,8 @@ function answerMessage() {
 
         }
     })
+
+    playerScore();
 
 }
 
