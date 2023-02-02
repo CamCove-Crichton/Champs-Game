@@ -212,6 +212,16 @@ function gameLevels() {
                 document.getElementById("player-number").disabled = false;
                 document.getElementById("submit").disabled = false;
 
+                document.addEventListener('keydown', function (event) {
+                    if (event.key === "Enter") {
+
+                        document.getElementById("level1").disabled = true;
+                        document.getElementById("level2").disabled = true;
+                        document.getElementById("level3").disabled = true;
+
+                    }
+                })
+
             } else if (this.getAttribute("data-entry") === "level-two") {
 
                 currentLevel = "level-two";
@@ -231,6 +241,16 @@ function gameLevels() {
 
                 document.getElementById("player-number").disabled = false;
                 document.getElementById("submit").disabled = false;
+
+                document.addEventListener('keydown', function (event) {
+                    if (event.key === "Enter") {
+
+                        document.getElementById("level1").disabled = true;
+                        document.getElementById("level2").disabled = true;
+                        document.getElementById("level3").disabled = true;
+
+                    }
+                })
 
             } else if (this.getAttribute("data-entry") === "level-three") {
 
@@ -252,9 +272,20 @@ function gameLevels() {
                 document.getElementById("player-number").disabled = false;
                 document.getElementById("submit").disabled = false;
 
+                document.addEventListener('keydown', function (event) {
+                    if (event.key === "Enter") {
+            
+                        document.getElementById("level1").disabled = true;
+                        document.getElementById("level2").disabled = true;
+                        document.getElementById("level3").disabled = true;
+                        
+                    }
+                })
+
             }
         })
     }
+
 }
 
 // function name and idea from Love Maths project

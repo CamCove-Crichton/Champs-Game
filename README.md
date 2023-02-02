@@ -98,6 +98,7 @@ To try to increase productivity with styling, devtools were used for the remaini
 - Issue with the :after element in displaying correctly - still needs more research and use of devtools (Decided to not utilise the :after and instead went with creating heading elements)
 - Need to sort the checkAnswer function to work correctly, possibly the two variables are not being seen as number values (Had assistance from Code Institute tutor support to sort this bug)
 - Need to see why when the level change is selected to a higher level and then back to a lower level that the data is not reassigned and stored in the variable currentLevel (Managed to use the debugger in the Devtools to find the issue in the function)
+- Need to find the bug for the keydown === "Enter" that is enabling the level buttons after clearing the message box - Managed to sort this bug by adding an event listener within the gameLevels function to listen for the enter key to keep the buttons disabled
 
 ### Validator Testing
 
@@ -106,8 +107,8 @@ To try to increase productivity with styling, devtools were used for the remaini
 
 ### Unfixed Bugs
 - Would like to finesse styling with the h3 headings in the question area div across all forms of media queries for a better responsive design
-- Need to find the bug for the keydown === "Enter" that is enabling the level buttons after clearing the message box - I think I have found the error is in the gameLevels() - need to come back to it
 - Need to find the bug that is displaying the 'Correct Answer' message after you win the game and close the 'Winner' message after you click the 'OK' button on the 'Winner' message
+- Need to fix the bug when the 'Select Level' message appears, it is not responding to clicks or keydown events
 
 ## Credits
 
