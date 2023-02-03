@@ -123,12 +123,13 @@ function checkAnswer() {
     let isCorrect = goalTarget === calculatedAnswer[0];
 
     if (isCorrect) {
-        // alert("Well done, you got it right :D");
+
         answerMessage();
-        // playerScore();
+
     } else {
-        // alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer[0]}, try again`);
+
         wrongAnswerMessage();
+        
         computerScore();
     }
 
@@ -296,14 +297,9 @@ function gameOver() {
 
     if (document.getElementById("player-score").innerHTML === "10") {
 
-        // alert("Congratulations! You have won the game :D Let's play again");
         winnerMessage();
 
         // gameReset();
-
-        // document.getElementById("level1").disabled = false;
-        // document.getElementById("level2").disabled = false;
-        // document.getElementById("level3").disabled = false;
 
         // document.getElementById("level1").style.backgroundColor = "#209CEE";
         // document.getElementById("level1").style.color = "black";
@@ -351,7 +347,7 @@ function gameReset() {
 
     // selectLevelMessage();
 
-    currentLevel = "Reset";
+    // currentLevel = "Reset";
 
     runGame(currentLevel);
 
@@ -389,7 +385,6 @@ function selectLevelMessage() {
         document.getElementById("level1").disabled = false;
         document.getElementById("level2").disabled = false;
         document.getElementById("level3").disabled = false;
-        // document.getElementById("submit").disabled = false;
 
     }
 
@@ -401,7 +396,6 @@ function selectLevelMessage() {
             document.getElementById("level1").disabled = false;
             document.getElementById("level2").disabled = false;
             document.getElementById("level3").disabled = false;
-            // document.getElementById("submit").disabled = false;
 
         }
     })
@@ -435,9 +429,6 @@ function answerMessage() {
 
         newDivCorrectAnswer.remove();
 
-        // document.getElementById("level1").disabled = false;
-        // document.getElementById("level2").disabled = false;
-        // document.getElementById("level3").disabled = false;
         document.getElementById("submit").disabled = false;
         document.getElementById("player-number").disabled = false;
         document.getElementById("player-number").focus();
@@ -449,9 +440,6 @@ function answerMessage() {
 
             newDivCorrectAnswer.remove();
 
-            // document.getElementById("level1").disabled = false;
-            // document.getElementById("level2").disabled = false;
-            // document.getElementById("level3").disabled = false;
             document.getElementById("submit").disabled = false;
             document.getElementById("player-number").disabled = false;
             document.getElementById("player-number").focus();
@@ -496,9 +484,6 @@ function wrongAnswerMessage() {
 
         newDivWrongAnswer.remove();
 
-        // document.getElementById("level1").disabled = false;
-        // document.getElementById("level2").disabled = false;
-        // document.getElementById("level3").disabled = false;
         document.getElementById("submit").disabled = false;
         document.getElementById("player-number").disabled = false;
         document.getElementById("player-number").focus();
@@ -510,9 +495,6 @@ function wrongAnswerMessage() {
 
             newDivWrongAnswer.remove();
 
-            // document.getElementById("level1").disabled = false;
-            // document.getElementById("level2").disabled = false;
-            // document.getElementById("level3").disabled = false;
             document.getElementById("submit").disabled = false;
             document.getElementById("player-number").disabled = false;
             document.getElementById("player-number").focus();
@@ -551,12 +533,7 @@ function winnerMessage() {
 
         gameReset();
 
-        // document.getElementById("level1").disabled = false;
-        // document.getElementById("level2").disabled = false;
-        // document.getElementById("level3").disabled = false;
-        // document.getElementById("submit").disabled = false;
-        // document.getElementById("player-number").disabled = false;
-        // document.getElementById("player-number").focus();
+        selectLevelMessage();
 
     }
 
@@ -567,12 +544,7 @@ function winnerMessage() {
 
             gameReset();
 
-            // document.getElementById("level1").disabled = false;
-            // document.getElementById("level2").disabled = false;
-            // document.getElementById("level3").disabled = false;
-            // document.getElementById("submit").disabled = false;
-            // document.getElementById("player-number").disabled = false;
-            // document.getElementById("player-number").focus();
+            selectLevelMessage();
 
         }
     })
