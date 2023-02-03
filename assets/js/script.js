@@ -123,13 +123,12 @@ function checkAnswer() {
     let isCorrect = goalTarget === calculatedAnswer[0];
 
     if (isCorrect) {
-
+        // alert("Well done, you got it right :D");
         answerMessage();
-
-    } else {
-
-        wrongAnswerMessage();
         
+    } else {
+        // alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer[0]}, try again`);
+        wrongAnswerMessage();
         computerScore();
     }
 
@@ -297,9 +296,8 @@ function gameOver() {
 
     if (document.getElementById("player-score").innerHTML === "10") {
 
+        // alert("Congratulations! You have won the game :D Let's play again");
         winnerMessage();
-
-        // gameReset();
 
         // document.getElementById("level1").style.backgroundColor = "#209CEE";
         // document.getElementById("level1").style.color = "black";
@@ -345,7 +343,7 @@ function gameReset() {
     document.getElementById("player-score").innerHTML = "0";
     document.getElementById("computer-score").innerHTML = "0";
 
-    // selectLevelMessage();
+    selectLevelMessage();
 
     // currentLevel = "Reset";
 
@@ -533,8 +531,6 @@ function winnerMessage() {
 
         gameReset();
 
-        selectLevelMessage();
-
     }
 
     document.addEventListener('keydown', function (event) {
@@ -543,8 +539,6 @@ function winnerMessage() {
             newDivWinnerAnswer.remove();
 
             gameReset();
-
-            selectLevelMessage();
 
         }
     })
