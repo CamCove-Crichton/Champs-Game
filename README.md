@@ -123,8 +123,20 @@ To try to increase productivity with styling, devtools were used for the remaini
 
 ### Validator Testing
 
-- Ran the index.html code through the W3C validator with no errors or warnings
+- Ran the index.html code through the W3C html validator with no errors or warnings
+
+[W3C Nu Html Checker](https://validator.w3.org/nu/#textarea)
+
+
 - Ran the style.css code through the W3C Jigsaw validator with no errors found
+
+[W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator)
+
+- Ran the script.js file through JSHint with no errors, and two warnings
+
+[JS Hint](https://jshint.com/)
+
+![Lighthouse performance and accessibility checks](assets/README%20images/Lighthouse.png)
 
 ### Unfixed Bugs
 - Would like to finesse styling with the h3 headings in the question area div across all forms of media queries for a better responsive design
