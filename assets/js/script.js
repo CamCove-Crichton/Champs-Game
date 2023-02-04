@@ -496,6 +496,7 @@ function winnerMessage() {
 
         newDivWinnerAnswer.remove();
 
+        // code from W3Schools
         location.reload();
 
     }
@@ -505,6 +506,7 @@ function winnerMessage() {
 
             newDivWinnerAnswer.remove();
 
+            // code from W3Schools
             location.reload();
 
         }
@@ -539,6 +541,7 @@ function loserMessage() {
 
         newDivLoserAnswer.remove();
 
+        // code from W3Schools
         location.reload();
 
     }
@@ -548,6 +551,7 @@ function loserMessage() {
 
             newDivLoserAnswer.remove();
 
+            // code from W3Schools
             location.reload();
 
         }
