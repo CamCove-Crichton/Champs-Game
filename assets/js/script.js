@@ -129,7 +129,7 @@ function checkAnswer() {
     } else {
         // alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer[0]}, try again`);
         wrongAnswerMessage();
-        computerScore();
+
     }
 
     gameOver();
@@ -343,7 +343,7 @@ function gameReset() {
     document.getElementById("player-score").innerHTML = "0";
     document.getElementById("computer-score").innerHTML = "0";
 
-    selectLevelMessage();
+    // selectLevelMessage();
 
     // currentLevel = "Reset";
 
@@ -500,6 +500,8 @@ function wrongAnswerMessage() {
         }
     })
 
+    computerScore();
+
 }
 
 /**
@@ -529,7 +531,7 @@ function winnerMessage() {
 
         newDivWinnerAnswer.remove();
 
-        gameReset();
+        location.reload();
 
     }
 
@@ -538,7 +540,7 @@ function winnerMessage() {
 
             newDivWinnerAnswer.remove();
 
-            gameReset();
+            location.reload();
 
         }
     })
