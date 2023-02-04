@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
 
     // for loop code from Code Institute - Love Maths Project
-    for (button of buttons) {
+    for (var button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-entry") === "submit") {
                 document.getElementById("computer-number").innerHTML = hiddenNumber;
@@ -76,7 +76,7 @@ function runGame(gameType) {
             let popup = document.getElementById("hint-popup");
             popup.classList.toggle("show");
             popup.innerText = `I am thinking between ${hintNum - 1} & ${hintNum +2}`;
-        }
+        };
 
     } else if (gameType === "level-two") {
 
@@ -88,7 +88,7 @@ function runGame(gameType) {
             let popup = document.getElementById("hint-popup");
             popup.classList.toggle("show");
             popup.innerText = `I am thinking between ${hintNum - 1} & ${hintNum +2}`;
-        }
+        };
 
     } else if (gameType === "level-three") {
 
@@ -100,7 +100,7 @@ function runGame(gameType) {
             let popup = document.getElementById("hint-popup");
             popup.classList.toggle("show");
             popup.innerText = `I am thinking between ${hintNum - 1} & ${hintNum +2}`;
-        }
+        };
 
     } else {
 
@@ -190,7 +190,7 @@ function gameLevels() {
 
     let levels = document.getElementsByClassName("levels");
 
-    for (level of levels) {
+    for (var level of levels) {
         level.addEventListener('click', function () {
             if (this.getAttribute("data-entry") === "level-one") {
 
@@ -220,7 +220,7 @@ function gameLevels() {
                         document.getElementById("level3").disabled = true;
 
                     }
-                })
+                });
 
             } else if (this.getAttribute("data-entry") === "level-two") {
 
@@ -250,7 +250,7 @@ function gameLevels() {
                         document.getElementById("level3").disabled = true;
 
                     }
-                })
+                });
 
             } else if (this.getAttribute("data-entry") === "level-three") {
 
@@ -280,10 +280,10 @@ function gameLevels() {
                         document.getElementById("level3").disabled = true;
 
                     }
-                })
+                });
 
             }
-        })
+        });
     }
 
 }
@@ -343,7 +343,7 @@ function selectLevelMessage() {
         document.getElementById("level2").disabled = false;
         document.getElementById("level3").disabled = false;
 
-    }
+    };
 
     document.addEventListener('keydown', function (event) {
         if (event.key === "Enter") {
@@ -355,7 +355,7 @@ function selectLevelMessage() {
             document.getElementById("level3").disabled = false;
 
         }
-    })
+    });
 
 }
 
@@ -390,7 +390,7 @@ function answerMessage() {
         document.getElementById("player-number").disabled = false;
         document.getElementById("player-number").focus();
 
-    }
+    };
 
     document.addEventListener('keydown', function (event) {
         if (event.key === "Enter") {
@@ -402,7 +402,7 @@ function answerMessage() {
             document.getElementById("player-number").focus();
 
         }
-    })
+    });
 
     if (document.getElementById("player-score").innerHTML === "10") {
 
@@ -445,7 +445,7 @@ function wrongAnswerMessage() {
         document.getElementById("player-number").disabled = false;
         document.getElementById("player-number").focus();
 
-    }
+    };
 
     document.addEventListener('keydown', function (event) {
         if (event.key === "Enter") {
@@ -457,7 +457,7 @@ function wrongAnswerMessage() {
             document.getElementById("player-number").focus();
 
         }
-    })
+    });
 
     if (document.getElementById("computer-score").innerHTML === "10") {
 
@@ -499,7 +499,7 @@ function winnerMessage() {
         // code from W3Schools
         location.reload();
 
-    }
+    };
 
     document.addEventListener('keydown', function (event) {
         if (event.key === "Enter") {
@@ -510,7 +510,7 @@ function winnerMessage() {
             location.reload();
 
         }
-    })
+    });
 
 }
 
@@ -544,7 +544,7 @@ function loserMessage() {
         // code from W3Schools
         location.reload();
 
-    }
+    };
 
     document.addEventListener('keydown', function (event) {
         if (event.key === "Enter") {
@@ -555,6 +555,6 @@ function loserMessage() {
             location.reload();
 
         }
-    })
+    });
 
 }
