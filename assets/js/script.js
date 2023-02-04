@@ -123,11 +123,11 @@ function checkAnswer() {
     let isCorrect = goalTarget === calculatedAnswer[0];
 
     if (isCorrect) {
-        
+
         answerMessage();
 
     } else {
-        
+
         wrongAnswerMessage();
 
     }
@@ -458,6 +458,12 @@ function wrongAnswerMessage() {
 
         }
     })
+
+    if (document.getElementById("computer-score").innerHTML === "10") {
+
+        newDivWrongAnswer.remove();
+
+    }
 
     computerScore();
 
