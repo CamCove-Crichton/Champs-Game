@@ -83,8 +83,29 @@ To try to increase productivity with styling, devtools were used for the remaini
 
 ### Finished Game Screen Grabs
 
+- Champs opening screen at the start of each new game
+![Champs opening page screen grab](assets/README%20images/Champs%20opening%20screen.png)
+
 - Champs Game, displaying the title, the level buttons, the target to try and match as well as the players input and the computers guess
 ![Champs game screen grab of game area](assets/README%20images/Game%20Screen%20grab%20one.png)
+
+- Champs game once the level has been selected
+![Champs game screen once a level has been selected](assets/README%20images/When%20a%20level%20is%20selceted.png)
+
+- Champs game hint when the mouse is hovered over the question mark for the player to get a hint
+![Champs game using the hint to help the player guess the correct number](assets/README%20images/Using%20the%20hint.png)
+
+- Champs game correct answer message displayed when player gets the answer right
+![Champs game displaying a message to indicate the correct answer](assets/README%20images/Correct%20answer%20message.png)
+
+- Champs game incorrect answer displayed when the player gets the answer wrong
+![Champs game displaying a message to indicate the wrong answer](assets/README%20images/Incorrect%20answer%20message.png)
+
+- Champs game winner message displayed when the player gets to 10 points
+![Champs game displaying a message to indicate the player has won the game](assets/README%20images/Winner%20message.png)
+
+- Champs game loser message displayed when the computer gets to 10 points
+![Champs game displaying a message to indicate the player has lost the game](assets/README%20images/Loser%20message.png)
 
 - Champs Game, displaying the player and computer scores and the rules on how to play the game
 ![Champs game screen grab of rules](assets/README%20images/Game%20Screen%20Grab%20two.png)
