@@ -242,7 +242,8 @@ input::-webkit-inner-spin-button {
 #level-select-div,
 #correct-answer-div,
 #wrong-answer-div,
-#winner-answer-div {
+#winner-answer-div,
+#loser-answer-div {
     width: 60%;
     height: 30%;
     position: absolute;
@@ -259,10 +260,12 @@ input::-webkit-inner-spin-button {
 #correct-message,
 #wrong-message,
 #winner-message,
+#loser-message,
 #ok,
 #ok1,
 #ok2,
-#ok3 {
+#ok3,
+#ok4 {
     text-align: center;
     padding: 5px;
 }
@@ -270,7 +273,8 @@ input::-webkit-inner-spin-button {
 #ok,
 #ok1,
 #ok2,
-#ok3 {
+#ok3,
+#ok4 {
     position: relative;
     left: 40%;
     bottom: 1%;
@@ -281,7 +285,8 @@ input::-webkit-inner-spin-button {
 #ok:hover,
 #ok1:hover,
 #ok2:hover,
-#ok3 {
+#ok3,
+#ok4 {
     box-shadow: 2px 2px 2px #555;
 }
 
@@ -312,7 +317,8 @@ input::-webkit-inner-spin-button {
     #ok,
     #ok1,
     #ok2,
-    #ok3 {
+    #ok3,
+    #ok4 {
         left: 42.5%;
     }
 
@@ -323,7 +329,8 @@ input::-webkit-inner-spin-button {
     #ok,
     #ok1,
     #ok2,
-    #ok3 {
+    #ok3,
+    #ok4 {
         padding: 10px;
     }
 
@@ -424,7 +431,8 @@ input::-webkit-inner-spin-button {
     #ok,
     #ok1,
     #ok2,
-    #ok3 {
+    #ok3,
+    #ok4 {
         left: 45%;
     }
 }
@@ -463,7 +471,8 @@ input::-webkit-inner-spin-button {
     #ok,
     #ok1,
     #ok2,
-    #ok3 {
+    #ok3,
+    #ok4 {
         left: 47.5%;
     }
 }

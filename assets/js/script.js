@@ -125,7 +125,7 @@ function checkAnswer() {
     if (isCorrect) {
         // alert("Well done, you got it right :D");
         answerMessage();
-        
+
     } else {
         // alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer[0]}, try again`);
         wrongAnswerMessage();
@@ -274,11 +274,11 @@ function gameLevels() {
 
                 document.addEventListener('keydown', function (event) {
                     if (event.key === "Enter") {
-            
+
                         document.getElementById("level1").disabled = true;
                         document.getElementById("level2").disabled = true;
                         document.getElementById("level3").disabled = true;
-                        
+
                     }
                 })
 
@@ -310,22 +310,23 @@ function gameOver() {
 
     } else if (document.getElementById("computer-score").innerHTML === "10") {
 
-        alert("Sorry you lost :( but don't be sad, lets play again!");
+        // alert("Sorry you lost :( but don't be sad, lets play again!");
+        loserMessage();
 
-        gameReset();
+        // gameReset();
 
         // selectLevelMessage();
 
-        document.getElementById("level1").style.backgroundColor = "#209CEE";
-        document.getElementById("level1").style.color = "black";
+        // document.getElementById("level1").style.backgroundColor = "#209CEE";
+        // document.getElementById("level1").style.color = "black";
 
-        document.getElementById("level2").style.backgroundColor = "#209CEE";
-        document.getElementById("level2").style.color = "black";
+        // document.getElementById("level2").style.backgroundColor = "#209CEE";
+        // document.getElementById("level2").style.color = "black";
 
-        document.getElementById("level3").style.backgroundColor = "#209CEE";
-        document.getElementById("level3").style.color = "black";
+        // document.getElementById("level3").style.backgroundColor = "#209CEE";
+        // document.getElementById("level3").style.color = "black";
 
-        document.getElementById("player-number").disabled = true;
+        // document.getElementById("player-number").disabled = true;
 
     } else {
 
@@ -539,6 +540,49 @@ function winnerMessage() {
         if (event.key === "Enter") {
 
             newDivWinnerAnswer.remove();
+
+            location.reload();
+
+        }
+    })
+
+}
+
+/**
+ * A function to display a message when the player loses the game
+ */
+function loserMessage() {
+
+    document.getElementById("level1").disabled = true;
+    document.getElementById("level2").disabled = true;
+    document.getElementById("level3").disabled = true;
+    document.getElementById("submit").disabled = true;
+    document.getElementById("player-number").disabled = true;
+
+    let body = document.body;
+
+    let newDivLoserAnswer = document.createElement("div");
+    newDivLoserAnswer.id = "loser-answer-div";
+
+    newDivLoserAnswer.innerHTML = `
+        <h2 id="loser-message"><i class="fa-solid fa-face-sad-cry"></i> Sorry, you lost <i class="fa-solid fa-face-sad-cry"></i> Lets play again!</h2>
+        <button id="ok4">OK</button>
+        `;
+
+    body.appendChild(newDivLoserAnswer);
+
+    document.getElementById("ok4").onclick = function () {
+
+        newDivLoserAnswer.remove();
+
+        location.reload();
+
+    }
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === "Enter") {
+
+            newDivLoserAnswer.remove();
 
             location.reload();
 
