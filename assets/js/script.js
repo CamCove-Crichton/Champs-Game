@@ -123,11 +123,11 @@ function checkAnswer() {
     let isCorrect = goalTarget === calculatedAnswer[0];
 
     if (isCorrect) {
-        // alert("Well done, you got it right :D");
+        
         answerMessage();
 
     } else {
-        // alert(`Sorry, that is incorrect, your total adds up to ${calculatedAnswer[0]}, try again`);
+        
         wrongAnswerMessage();
 
     }
@@ -296,59 +296,17 @@ function gameOver() {
 
     if (document.getElementById("player-score").innerHTML === "10") {
 
-        // alert("Congratulations! You have won the game :D Let's play again");
         winnerMessage();
-
-        // document.getElementById("level1").style.backgroundColor = "#209CEE";
-        // document.getElementById("level1").style.color = "black";
-
-        // document.getElementById("level2").style.backgroundColor = "#209CEE";
-        // document.getElementById("level2").style.color = "black";
-
-        // document.getElementById("level3").style.backgroundColor = "#209CEE";
-        // document.getElementById("level3").style.color = "black";
 
     } else if (document.getElementById("computer-score").innerHTML === "10") {
 
-        // alert("Sorry you lost :( but don't be sad, lets play again!");
         loserMessage();
-
-        // gameReset();
-
-        // selectLevelMessage();
-
-        // document.getElementById("level1").style.backgroundColor = "#209CEE";
-        // document.getElementById("level1").style.color = "black";
-
-        // document.getElementById("level2").style.backgroundColor = "#209CEE";
-        // document.getElementById("level2").style.color = "black";
-
-        // document.getElementById("level3").style.backgroundColor = "#209CEE";
-        // document.getElementById("level3").style.color = "black";
-
-        // document.getElementById("player-number").disabled = true;
 
     } else {
 
         runGame(currentLevel);
 
     }
-
-}
-
-/**
- * A function to reset the scores when the game is over show the game has started again
- */
-function gameReset() {
-
-    document.getElementById("player-score").innerHTML = "0";
-    document.getElementById("computer-score").innerHTML = "0";
-
-    // selectLevelMessage();
-
-    // currentLevel = "Reset";
-
-    runGame(currentLevel);
 
 }
 
@@ -522,7 +480,7 @@ function winnerMessage() {
     newDivWinnerAnswer.id = "winner-answer-div";
 
     newDivWinnerAnswer.innerHTML = `
-        <h2 id="winner-message"><i class="fa-solid fa-crown"></i> Congratulations! <i class="fa-solid fa-crown"></i> You WON!! </h2>
+        <h2 id="winner-message"><i class="fa-solid fa-crown"></i> Congratulations! <i class="fa-solid fa-crown"></i> You WON!!</h2>
         <button id="ok3">OK</button>
         `;
 
