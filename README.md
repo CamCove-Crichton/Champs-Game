@@ -286,6 +286,25 @@ To try to increase productivity with styling, devtools were used for the remaini
 }
 ```
 
+- Code for removing spinners in the input within Mozialla Firefox from Stack Overflow
+```
+{
+    /* Code from Stack Overflow */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Code from Stack Overflow */
+@-moz-document url-prefix(){
+    input[type=number] {
+        appearance:textfield;
+    }
+}
+}
+```
+
 #### script.js Credits
 
 - Idea to check DOMContentLoaded as well as some function name idea from the Code Institute - Love Maths Project
