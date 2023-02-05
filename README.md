@@ -80,6 +80,9 @@ To try to increase productivity with styling, devtools were used for the remaini
 - Decided to add in a hint for the player, when the mouse moves over the question mark, it will display a range that the computer is thinking of
 - Decided to add in a function to display a message to the player to prompt them to choose a level in order to start the game
 - Added in a function to display a message when the player gets the answer right or wrong, and when the player wins or loses the game, as opposed to just an alert box
+- After troubleshooting to find and fix as many bugs as possible, I ran the code from the different directories through their respective code validators
+- I then ran a Lighthouse check on the performance, accessibility, best practices and SEO
+I then began testing the game on multiple browsers, Google Chrome, Mozilla Firefox and Microsoft Edge
 
 ### Finished Game Screen Grabs
 
