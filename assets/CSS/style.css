@@ -256,6 +256,10 @@ input::-webkit-inner-spin-button {
     box-shadow: 5px 5px 5px #555;
 }
 
+#winner-message {
+    font-size: 1rem;
+}
+
 #level-select,
 #correct-message,
 #wrong-message,
@@ -332,6 +336,10 @@ input::-webkit-inner-spin-button {
     #ok3,
     #ok4 {
         padding: 10px;
+    }
+
+    #winner-message {
+        font-size: 1.5em;
     }
 
     #player-h3 {
