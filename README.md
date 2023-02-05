@@ -12,7 +12,7 @@
 
 [Champs Game](https://camcove-crichton.github.io/Champs-Game/) - Click "Champs Game" to visit the site and to play the game
 
-- Using Github repositories, I went into the Settings pages
+- Using Github repositories, I went into the Settings page
 - Down the right side of the settings page, I went into the Pages tab
 - Under Branch, I selected the drop down arrow and changed it from 'none' to 'main'
 - I then selected the Save button
@@ -56,7 +56,7 @@
 - Continued styling, but started to get more specific by starting on the elements in the game area
 - Added a heading for the target number in the index.html file
 - Continued styling, and after running into some issues with positioning, used devtools to get to the bottom of the mysteries, and rectified
-To try to increase productivity with styling, devtools were used for the remaining part of the styling process to use as a visual as styling was done, and then from the devtools I would take my code from trial and error and paste into my style.css file
+- To try to increase productivity with styling, devtools were used for the remaining part of the styling process to use as a visual as styling was done, and then from the devtools I would take my code from trial and error and paste into my style.css file
 - Continued to fine tune the styling and began working on the media queries for a responsive design, working on it from a small mobile screen to add media queries as the screen size increases
 - Moved onto creating the function names I could think of that would be required for the script.js file in order to manipulate the DOM for the game to work
 - Changed the number display for the Computer player to a "?" instead of a number as it shall remain hidden until the user player submits their answer
