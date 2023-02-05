@@ -115,7 +115,30 @@ I then began testing the game on multiple browsers, Google Chrome, Mozilla Firef
 
 ## Testing
 
+- All tests were run on Google Chrome, Mozilla Firefox and Microsoft Edge
+
 | Test | Expected Result | Pass/Fail |
+| ----------- | ----------- | ----------- |
+| Responsive Design | Game Design responds accordingly to the size of the screen it is been displayed on | Pass |
+| Page Load | On page load, a modal appears to inform the player they need to select the level to start the game | Pass |
+| All 'level', 'submit' buttons and player input disabled on page load | Upon the page loading, all the level buttons, submit button and player input are not responsive, apart from the modal with the 'OK' button when using the mouse to click | Pass |
+Level Select modal responsive | The level select modal responds to either a click on the okay button or the press of the 'enter' key to remove it | Pass |
+Only 'level' buttons are responsive | After the level select modal is cleared, only the 'level' buttons are responsive to a 'click' while the input element and the 'submit' button remains disabled | Pass |
+All three 'level buttons work | Each level button responds to select the level with the color of the button changing to indicate the level selected and the game initiates | Pass |
+Cannot change levels once level selected | Once a level has been selected, you cannot select another level until the game is over | Pass |
+The player input and the 'submit' button are responsive once a level is selected | Once the player selects a level to start the game, the input element and 'submit' button are enabled | Pass |
+Submit button responds to 'clicks' | When the player uses a mouse to click the 'submit' button, it checks the answer and responds by displaying the computers number and then approriate modal | Pass |
+Submit responds to the keypress of Enter | When the player uses the 'enter' key to submit their answer, it responds by displaying the computers answer and the appropriate modal | Pass |
+Correct Answer Modal | When the player gets the answer right, the 'correct answer' modal appears | Pass |
+Wrong Answer Modal | When the player gets the answer wrong, the 'wrong answer' modal appears | Pass |
+Clearing the Correct and Wrong Answer modals with a 'click' | When the player clicks the "OK" button, the respective modal clears from the screen | Pass |
+Clearing the Correct and Wrong Answer modals with a key press of 'Enter' | When the player presses the 'enter' key, the respective modal clears from the screen | Fail |
+The Player and Computer Score counter | When the player gets an answer right, the count goes up by one, and when the player gets ans answer wrong, the computer score goes up by one | Pass |
+Hint popup | When the player moves the mouse over the question mark, a popup appears to give a hint to the player | Pass |
+Winner Message | When the player gets to a score of 10 a 'Winner Message' modal appears | Pass |
+Loser Message | When the computer score gets to 10, a 'Loser Message' modal appears | Pass |
+Page Reloads | When the player clears the winner or loser message modal the page reloads to start again | Pass |
+
 
 ### Bugs
 - Issues with positioning in the game area styling section (Used devtools to see what was happening and made progress)
@@ -145,6 +168,7 @@ I then began testing the game on multiple browsers, Google Chrome, Mozilla Firef
 - Would like to finesse styling with the h3 headings in the question area div across all forms of media queries for a better responsive design
 - Need to find the bug that is displaying the 'Correct Answer' message after you win the game and close the 'Winner' message after you click the 'OK' button on the 'Winner' message
 - Need to fix the bug when the 'Select Level' message appears, it is not responding to clicks or keydown events (As a work around I had to use the location reload method to reload the page to start the game again)
+- In Mozilla Firefox, when the player gets an answer right or wrong and the modal appears, although the input is disabled, the focus remains on the input and does not listen for the keydown with the modal on the screen
 
 ## Credits
 
