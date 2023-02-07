@@ -67,9 +67,7 @@ function runGame(gameType) {
     let num6 = parseInt(Math.floor(Math.random() * 15) + 1);
 
     if (gameType === "level-one") {
-
         levelQuestion(num1, num2);
-
         hintNum = num2;
 
         document.getElementById("computer-number").onmouseover = function popUp() {
@@ -77,11 +75,8 @@ function runGame(gameType) {
             popup.classList.toggle("show");
             popup.innerText = `I am thinking between ${hintNum - 1} & ${hintNum +2}`;
         };
-
     } else if (gameType === "level-two") {
-
         levelQuestion(num3, num4);
-
         hintNum = num4;
 
         document.getElementById("computer-number").onmouseover = function popUp() {
@@ -89,11 +84,8 @@ function runGame(gameType) {
             popup.classList.toggle("show");
             popup.innerText = `I am thinking between ${hintNum - 1} & ${hintNum +2}`;
         };
-
     } else if (gameType === "level-three") {
-
         levelQuestion(num5, num6);
-
         hintNum = num6;
 
         document.getElementById("computer-number").onmouseover = function popUp() {
@@ -101,11 +93,8 @@ function runGame(gameType) {
             popup.classList.toggle("show");
             popup.innerText = `I am thinking between ${hintNum - 1} & ${hintNum +2}`;
         };
-
     } else {
-
         selectLevelMessage();
-
     }
 
 }
@@ -123,13 +112,9 @@ function checkAnswer() {
     let isCorrect = goalTarget === calculatedAnswer[0];
 
     if (isCorrect) {
-
         answerMessage();
-
     } else {
-
         wrongAnswerMessage();
-
     }
 
     gameOver();
@@ -214,11 +199,9 @@ function gameLevels() {
 
                 document.addEventListener('keydown', function (event) {
                     if (event.key === "Enter") {
-
                         document.getElementById("level1").disabled = true;
                         document.getElementById("level2").disabled = true;
                         document.getElementById("level3").disabled = true;
-
                     }
                 });
 
@@ -244,11 +227,9 @@ function gameLevels() {
 
                 document.addEventListener('keydown', function (event) {
                     if (event.key === "Enter") {
-
                         document.getElementById("level1").disabled = true;
                         document.getElementById("level2").disabled = true;
                         document.getElementById("level3").disabled = true;
-
                     }
                 });
 
@@ -274,11 +255,9 @@ function gameLevels() {
 
                 document.addEventListener('keydown', function (event) {
                     if (event.key === "Enter") {
-
                         document.getElementById("level1").disabled = true;
                         document.getElementById("level2").disabled = true;
                         document.getElementById("level3").disabled = true;
-
                     }
                 });
 
@@ -295,17 +274,11 @@ function gameLevels() {
 function gameOver() {
 
     if (document.getElementById("player-score").innerHTML === "10") {
-
         winnerMessage();
-
     } else if (document.getElementById("computer-score").innerHTML === "10") {
-
         loserMessage();
-
     } else {
-
         runGame(currentLevel);
-
     }
 
 }
