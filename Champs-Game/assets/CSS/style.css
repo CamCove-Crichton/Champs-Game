@@ -1,0 +1,500 @@
+/* General Styling */
+body {
+    background-color: #D3D3D3;
+    font-family: 'Laila', Tahoma, sans-serif;
+    font-weight: bolder;
+    line-height: 1.5rem;
+}
+
+section,
+footer {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 15px;
+    border: 2px solid black;
+}
+
+.section {
+    background-color: whitesmoke;
+    text-align: center;
+    border-radius: 5px
+}
+
+.footer {
+    background-color: #209CEE;
+    border-radius: 5px;
+}
+
+.headings {
+    font-family: 'Roboto Mono', Tahoma, sans‑serif;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 1rem;
+    padding: 15px 0;
+}
+
+/* game area styling */
+#level-div {
+    margin: 10px 0 0;
+}
+
+.levels {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    background-color: #209CEE;
+    font-weight: bolder;
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+
+.levels:active,
+.levels:hover {
+    background-color: black;
+    color: whitesmoke;
+    box-shadow: 5px 5px 5px #555;
+}
+
+#target-h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 15px;
+}
+
+#target-div {
+    height: auto;
+}
+
+.goal {
+    font-size: 300%;
+    height: 75px;
+    margin: 0;
+    line-height: normal;
+}
+
+.question-area {
+    margin: 15px 5px 0;
+}
+
+/* Idea from Love Maths project */
+.user {
+    width: 45px;
+    height: 30px;
+    font-size: 2.5rem;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.user #player-number {
+    width: inherit;
+    height: 2.5rem;
+    margin: 0;
+    position: relative;
+    font-size: 2.5rem;
+    font-family: 'Laila', Tahoma, sans-serif;
+    font-weight: bolder;
+    box-sizing: border-box;
+}
+
+.user p {
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+/* code from W3 Schools */
+/* popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* code from W3 Schools */
+/* actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -40px;
+    font-size: 1.3rem;
+}
+
+/* code from W3 Schools */
+/* popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* code from W3 Schools */
+/* hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* code from W3 Schools */
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.question-h3 {
+    font-size: 1rem;
+    padding: 5px;
+    width: 75px;
+    display: inline-block;
+}
+
+#player-h3 {
+    position: relative;
+    left: -15px;
+}
+
+#computer-h3 {
+    position: relative;
+    right: -15px;
+}
+
+/* Idea from w3schools */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Code from Stack Overflow */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Code from Stack Overflow */
+@-moz-document url-prefix(){
+    input[type=number] {
+        appearance:textfield;
+    }
+}
+
+#submit {
+    width: 180px;
+    height: 60px;
+    font-size: 2.5rem;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: #209CEE;
+}
+
+#submit:hover {
+    background-color: black;
+    color: #209CEE;
+    box-shadow: 5px 5px 5px #555;
+}
+
+/* score styling */
+.scores {
+    font-size: 1rem;
+    color: whitesmoke;
+    background-color: black;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    padding: 0 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#player-score {
+    color: #209CEE;
+}
+
+#computer-score {
+    color: red;
+}
+
+/* Select level message styling */
+#level-select-div,
+#correct-answer-div,
+#wrong-answer-div,
+#winner-answer-div,
+#loser-answer-div {
+    width: 60%;
+    height: 30%;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    background-color: #209CEE;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #555;
+}
+
+#winner-message {
+    font-size: 1rem;
+}
+
+#level-select,
+#correct-message,
+#wrong-message,
+#winner-message,
+#loser-message,
+#ok,
+#ok1,
+#ok2,
+#ok3,
+#ok4 {
+    text-align: center;
+    padding: 5px;
+}
+
+#ok,
+#ok1,
+#ok2,
+#ok3,
+#ok4 {
+    position: relative;
+    left: 40%;
+    bottom: 1%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#ok:hover,
+#ok1:hover,
+#ok2:hover,
+#ok3,
+#ok4 {
+    box-shadow: 2px 2px 2px #555;
+}
+
+/* footer styling */
+#footer-h2 {
+    line-height: 2.5rem;
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+#instructions {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.rules {
+    padding: 10px 0;
+}
+
+/* media queries */
+/* for screens 400px and above */
+@media screen and (min-width: 400px) {
+    #champs {
+        font-size: 5rem;
+    }
+
+    #ok,
+    #ok1,
+    #ok2,
+    #ok3,
+    #ok4 {
+        left: 42.5%;
+    }
+
+    #level-select,
+    #correct-message,
+    #wrong-message,
+    #winner-message,
+    #ok,
+    #ok1,
+    #ok2,
+    #ok3,
+    #ok4 {
+        padding: 10px;
+    }
+
+    #winner-message {
+        font-size: 1.5em;
+    }
+
+    #player-h3 {
+        position: relative;
+        left: -30px;
+    }
+
+    #computer-h3 {
+        position: relative;
+        right: -30px;
+    }
+
+    .scores {
+        width: 200px;
+        display: inline-block;
+        left: 0;
+        margin: 20px 15px 10px 15px;
+        padding: 10px;
+    }
+}
+
+/* for screens 600px and above */
+@media screen and (min-width: 600px) {
+    .levels {
+        width: 200px;
+        display: inline-block;
+        left: revert;
+        margin: 15px 10px;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    #target-h2 {
+        font-size: 2.5rem;
+        padding-bottom: 15px;
+    }
+
+    #target-div {
+        margin: 15px;
+    }
+
+    .goal {
+        font-size: 7.5rem;
+        contain: content;
+        line-height: 1.3em;
+        height: 150px;
+    }
+
+    .user {
+        padding: 10px;
+        height: 60px;
+        width: 90px;
+        font-size: 5rem;
+    }
+
+    .user #player-number {
+        font-size: 5rem;
+        height: 75px;
+    }
+
+    .question-h3 {
+        font-size: 1.5rem;
+        width: 120px;
+    }
+
+    #player-h3 {
+        position: relative;
+        left: -60px;
+    }
+
+    #computer-h3 {
+        position: relative;
+        right: -60px;
+    }
+
+    #submit {
+        margin: 15px;
+    }
+
+    #game-scores {
+        margin-bottom: 15px;
+    }
+
+    #footer-h2 {
+        margin-top: 15px;
+    }
+
+    #instructions {
+        margin: 15px;
+    }
+
+    #level-select-div {
+        height: 25%;
+        top: 45%;
+    }
+
+    #ok,
+    #ok1,
+    #ok2,
+    #ok3,
+    #ok4 {
+        left: 45%;
+    }
+}
+
+/* for screens 1000px and above */
+@media screen and (min-width: 1000px) {
+    .levels {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .user {
+        margin: 15px 60px;
+    }
+
+    .question-h3 {
+        font-size: 2.5rem;
+        width: 240px;
+        margin: 0;
+    }
+
+    #player-h3 {
+        position: relative;
+        left: -105px;
+    }
+
+    #computer-h3 {
+        position: relative;
+        right: -105px;
+    }
+
+    .scores {
+        margin: 30px 90px 15px 90px;
+    }
+
+    #ok,
+    #ok1,
+    #ok2,
+    #ok3,
+    #ok4 {
+        left: 47.5%;
+    }
+}

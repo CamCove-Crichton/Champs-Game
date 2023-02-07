@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A numbers guessing game">
+    <meta name="keywords" content="guessing game, numbers game, game, basic game, kids game, basic math game">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/c1b12b8cf9.js" crossorigin="anonymous"></script>
+
+    <!-- google fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Laila:wght@300&family=Roboto+Mono&display=swap');
+    </style>
+
+    <!-- favicon -->
+    <!-- idea from Love Maths project -->
+    <link rel='shortcut icon' type='image/x-icon' href="android-chrome-192x192.png" />
+
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <title>Champs game</title>
+</head>
+
+<body>
+    <!-- header for the logo of the game -->
+    <header>
+        <h1 id="champs" class="headings">Champs</h1>
+    </header>
+
+    <!-- game area section -->
+    <section class="section">
+        <!-- level buttons -->
+        <!-- idea for the levels using buttons from the Love Maths project -->
+        <div id="level-div">
+            <button id="level1" data-entry="level-one" class="levels">level 1</button>
+            <button id="level2" data-entry="level-two" class="levels">level 2</button>
+            <button id="level3" data-entry="level-three" class="levels">level 3</button>
+        </div>
+        
+        <!-- target number display div -->
+        <div id="target-div">
+            <h2 id="target-h2">Target:</h2>
+            <p id="num-target" class="goal" data-entry="target">0</p>
+        </div>
+
+        <!-- question area div -->
+        <div>
+            <div class="question-area">
+                <!-- idea from Code Institute Love Maths project -->
+                <div class="user">
+                    <input id="player-number" data-entry="player" type="number">
+                </div>
+                <div class="user" id="operator"><i class="fa-solid fa-plus"></i></div>
+                <div class="user popup">
+                    <span class="popuptext" id="hint-popup">Test</span>
+                    <p id="computer-number" data-entry="computer">?</p>
+                </div>
+            </div>
+            <div>
+                <label for="player-number" id="player-h3" class="question-h3">Player</label>
+                <h3 id="computer-h3" class="question-h3">Computer</h3>
+            </div>
+            <button id="submit" data-entry="submit">Submit</button>
+        </div>
+
+        <!-- scores div -->
+        <!-- idea used from the Love Maths project -->
+        <div id="game-scores">
+            <p class="scores">Players Score: <span id="player-score">0</span></p>
+            <p class="scores">Computer Score: <span id="computer-score">0</span></p>
+        </div>
+    </section>
+
+    <!-- footer for the "How To Play" instructions -->
+    <footer class="footer">
+        <h2 id="footer-h2" class="headings">How To Play:</h2>
+       
+        <ul id="instructions">
+            <li class="rules">To start the game, select which level you wish to play, "level 1", "level 2" or "level 3"</li>
+            <li class="rules">Once the level is selected you must play the game until you have either won or unfortunately lost, before you can select another level</li>
+            <li class="rules">Try to match the target number by guessing a number from 1 to 10 for level 1, from 1 to 20
+                for level 2 and from 1 to 30 for level 3, depending on the target
+                number
+            </li>
+            <li class="rules">Submit your answer once you are happy with your guess</li>
+            <li class="rules">The computer will then guess a number from 1 to 5 for level 1, from 1 to 10 for level 2
+                and from 1 to 15 for level 3</li>
+            <li class="rules">If the sum of your number and the computers number equal the target number you get a point
+            </li>
+            <li class="rules">If the sum does not match the target number, then the computer gets a point</li>
+            <li class="rules">The first to get to 10 points wins</li>
+            <li class="rules">If you are struggling, you can hover your mouse over the question mark for a hint</li>
+        </ul>
+        
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
